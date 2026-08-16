@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors — HackSJSU</title>
+  <meta name="description" content="Meet the HackSJSU mentors — experienced engineers and researchers available to help your team during the hackathon.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Expert Support</span>
+    <h1>Meet the <span class="gradient-text">Mentors</span></h1>
+    <p>Our mentors are experienced engineers, researchers, and founders ready to help your team during the hackathon. Make the most of them!</p>
+  </div>
+</section>
+
+<!-- How Mentoring Works -->
+<section class="section-sm">
+  <div class="container">
+    <div class="grid-3">
+      <div class="card text-center fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">📋</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">1. Sign Up</h4>
+        <p style="font-size:0.9rem">At the event, sign up for 1:1 mentor sessions at the mentor table. Each session is 15–20 minutes.</p>
+      </div>
+      <div class="card text-center fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">💬</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">2. Get Help</h4>
+        <p style="font-size:0.9rem">Get targeted advice on your technical challenges, AI implementation, product design, or pitch strategy.</p>
+      </div>
+      <div class="card text-center fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🚀</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">3. Build Faster</h4>
+        <p style="font-size:0.9rem">Apply the feedback, unblock your team, and ship an even better project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mentors Grid -->
+<section class="section" style="padding-top:1rem">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">The Team</span>
+      <h2>Your <span class="gradient-text">Mentors</span></h2>
+    </div>
+    <div class="grid-3" id="mentors-grid"></div>
+  </div>
+</section>
+
+<!-- Mentor Office Hours -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div style="max-width:680px;margin:0 auto;text-align:center">
+      <span class="section-tag">Office Hours</span>
+      <h2 style="margin:1rem 0">When Are Mentors <span class="gradient-text">Available?</span></h2>
+      <p style="line-height:1.8;margin-bottom:1.5rem">Mentors are available during scheduled office hour blocks throughout the hackathon. Check the schedule for exact times. You can also find mentors informally throughout the event — most are happy to chat!</p>
+      <a href="schedule.html" class="btn btn-primary">View Office Hours Schedule</a>
+    </div>
+  </div>
+</section>
+
+<!-- Want to be a Mentor? -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Want to <span class="gradient-text">Mentor?</span></h2>
+      <p>Give back to the student community! If you're a professional with experience in AI, software engineering, product, or design, we'd love to have you.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold">Apply to Mentor</a>
+        <a href="judges.html" class="btn btn-outline">Meet the Judges</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    renderMentors('mentors-grid');
+    initFadeIn();
+  });
+</script>
+</body>
+</html>

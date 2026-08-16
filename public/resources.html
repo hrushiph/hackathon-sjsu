@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — HackSJSU</title>
+  <meta name="description" content="Participant resources for HackSJSU — AI APIs, cloud credits, starter kits, design tools, and learning materials.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Participant Resources</span>
+    <h1>Helpful <span class="gradient-text">Resources</span></h1>
+    <p>Everything you need to build an amazing project at HackSJSU — APIs, tools, frameworks, and learning materials.</p>
+  </div>
+</section>
+
+<!-- Quick Tip -->
+<section class="section-sm">
+  <div class="container">
+    <div style="max-width:700px;margin:0 auto;padding:1.25rem 1.5rem;background:rgba(0,85,162,0.08);border:1px solid rgba(0,85,162,0.25);border-radius:12px;display:flex;gap:1rem;align-items:flex-start">
+      <span style="font-size:1.5rem;flex-shrink:0">💡</span>
+      <div>
+        <strong>Pro Tip:</strong> Set up your API keys and cloud accounts <em>before</em> the hackathon. Rate limits and verification can take time. Check the HP Developer Portal for any HackSJSU-specific credits or API access.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resources List -->
+<section class="section" style="padding-top:1rem">
+  <div class="container">
+    <div id="resources-list"></div>
+  </div>
+</section>
+
+<!-- Tech Stack Suggestions -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Quick Starts</span>
+      <h2>Suggested <span class="gradient-text">Tech Stacks</span></h2>
+      <p>Not sure where to start? Here are some battle-tested stacks for each type of AI project.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div style="font-size:1.75rem;margin-bottom:0.75rem">🌐</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.75rem">Web App with AI</h4>
+        <div class="tools-list">
+          <span class="tool-tag">Next.js / React</span>
+          <span class="tool-tag">OpenAI API</span>
+          <span class="tool-tag">Vercel</span>
+          <span class="tool-tag">Supabase</span>
+          <span class="tool-tag">Tailwind CSS</span>
+        </div>
+        <p style="font-size:0.85rem;margin-top:0.75rem">Best for: chatbots, dashboards, user-facing AI tools</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:1.75rem;margin-bottom:0.75rem">🤖</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.75rem">ML / Data Pipeline</h4>
+        <div class="tools-list">
+          <span class="tool-tag">Python / FastAPI</span>
+          <span class="tool-tag">PyTorch / HuggingFace</span>
+          <span class="tool-tag">Google Colab</span>
+          <span class="tool-tag">Streamlit</span>
+          <span class="tool-tag">LangChain</span>
+        </div>
+        <p style="font-size:0.85rem;margin-top:0.75rem">Best for: custom models, data analysis, ML pipelines</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:1.75rem;margin-bottom:0.75rem">📱</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.75rem">Mobile AI App</h4>
+        <div class="tools-list">
+          <span class="tool-tag">React Native / Expo</span>
+          <span class="tool-tag">Google Gemini</span>
+          <span class="tool-tag">Firebase</span>
+          <span class="tool-tag">TensorFlow Lite</span>
+        </div>
+        <p style="font-size:0.85rem;margin-top:0.75rem">Best for: on-device AI, mobile-first experiences</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Ready to <span class="gradient-text">Build?</span></h2>
+      <p>Register now and start planning your project. Resources are available before the event starts.</p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn btn-gold">Register — It's Free</a>
+        <a href="challenges.html" class="btn btn-outline">Choose Your Track</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    renderResources('resources-list');
+    initFadeIn();
+  });
+</script>
+</body>
+</html>

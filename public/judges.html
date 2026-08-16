@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Judges — HackSJSU</title>
+  <meta name="description" content="Meet the expert judges of HackSJSU — industry leaders from tech, academia, and innovation who will evaluate your projects.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Expert Panel</span>
+    <h1>Meet the <span class="gradient-text">Judges</span></h1>
+    <p>Our distinguished panel of judges brings decades of experience from Silicon Valley, academia, and the AI industry. They will evaluate your projects across all tracks.</p>
+  </div>
+</section>
+
+<!-- Judges Grid -->
+<section class="section">
+  <div class="container">
+    <div class="grid-3" id="judges-grid"></div>
+  </div>
+</section>
+
+<!-- Judging Note -->
+<section class="section-sm" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div style="max-width:640px;margin:0 auto;text-align:center">
+      <h3 style="font-family:var(--font-heading);margin-bottom:1rem">How Judging Works</h3>
+      <p style="line-height:1.8;margin-bottom:1.5rem">During the Demo Fair, judges will circulate through all project tables, spending 5–7 minutes with each team. They'll ask questions about your approach, technology choices, and impact. After the fair, judges deliberate and score each project using our standardized rubric.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="challenges.html" class="btn btn-outline">View Judging Criteria</a>
+        <a href="schedule.html" class="btn btn-outline">See Demo Fair Schedule</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Want to be a Judge? -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Want to <span class="gradient-text">Judge?</span></h2>
+      <p>Are you an industry professional or academic who'd like to participate as a judge? We'd love to hear from you.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold">Get in Touch</a>
+        <a href="mentors.html" class="btn btn-outline">Meet the Mentors</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    renderJudges('judges-grid');
+  });
+</script>
+</body>
+</html>

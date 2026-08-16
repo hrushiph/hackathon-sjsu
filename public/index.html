@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">HackSJSU — SJSU's Premier AI Hackathon</title>
+  <meta name="description" id="page-desc" content="HackSJSU is San Jose State University's flagship 24-hour hackathon co-powered by HP. Build, innovate, and win $20,000+ in prizes.">
+  <meta property="og:title" content="HackSJSU">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<div id="nav-placeholder"></div>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">
+        <span id="status-badge"></span>
+        <span class="hero-badge badge-sponsors">Co-hosted by SJSU &amp; HP</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="event-name" id="hero-event-name"></span>
+        <span id="hero-tagline-inline" style="display:block;font-size:0.55em;font-weight:400;color:var(--clr-text-muted);margin-top:0.5rem;-webkit-text-fill-color:var(--clr-text-muted)"></span>
+      </h1>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="icon">📅</span> <span id="hero-date"></span></div>
+        <div class="hero-meta-item"><span class="icon">📍</span> <span id="hero-location"></span></div>
+        <div class="hero-meta-item"><span class="icon">⏱</span> <span id="hero-hours"></span> Hours</div>
+      </div>
+
+      <!-- Countdown -->
+      <div id="countdown-container" style="margin-bottom:2.5rem"></div>
+
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary" id="hero-cta-reg">
+          🚀 Register Now — It's Free
+        </a>
+        <a href="about.html" class="btn btn-outline">Learn More</a>
+        <a href="challenges.html" class="btn btn-outline">View Challenges</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ════════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid" id="stats-grid"></div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT TEASER ════════════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div>
+        <span class="section-tag">About the Event</span>
+        <h2 id="about-heading">What is <span class="gradient-text" id="about-event-name"></span>?</h2>
+        <p style="margin:1.25rem 0 1.5rem;font-size:1.05rem;line-height:1.8" id="about-desc"></p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+          <a href="schedule.html" class="btn btn-outline">View Schedule</a>
+        </div>
+      </div>
+      <div>
+        <div class="card-glass" style="padding:2.5rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem" id="about-stats-mini"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHALLENGES TEASER ════════════════════════════════════ -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Tracks</span>
+      <h2>Hackathon <span class="gradient-text">Challenges</span></h2>
+      <p>Choose your track. Build your solution. Win your prize.</p>
+    </div>
+    <div class="grid-3" id="featured-challenges"></div>
+    <div class="text-center mt-4">
+      <a href="challenges.html" class="btn btn-outline">View All Challenges →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ JUDGES TEASER ════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Expert Panel</span>
+      <h2>Meet the <span class="gradient-text">Judges</span></h2>
+      <p>Industry leaders from tech, academia, and innovation who will evaluate your projects.</p>
+    </div>
+    <div class="grid-4" id="featured-judges"></div>
+    <div class="text-center mt-4">
+      <a href="judges.html" class="btn btn-outline">See All Judges →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPONSORS ════════════════════════════════════════════ -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Powered By</span>
+      <h2>Our <span class="gradient-text">Sponsors</span></h2>
+      <p>HackSJSU is made possible by the generous support of our sponsors.</p>
+    </div>
+    <div id="homepage-sponsors"></div>
+    <div class="text-center mt-4">
+      <a href="sponsors.html" class="btn btn-outline">View All Sponsors →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA SECTION ═════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section">
+      <span class="section-tag">Don't Miss Out</span>
+      <h2>Ready to <span class="gradient-text">Hack?</span></h2>
+      <p id="cta-desc">Join hundreds of students, compete for $20,000+ in prizes, and build something amazing in 24 hours.</p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn btn-gold" id="cta-reg">🚀 Register Now — It's Free</a>
+        <a href="challenges.html" class="btn btn-outline">Explore Challenges</a>
+      </div>
+      <p style="margin-top:1.5rem;font-size:0.85rem;opacity:0.6" id="cta-date-note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const e = CONFIG.event;
+
+    // Set dynamic page title and meta
+    document.getElementById('page-title').textContent = `${e.name} — ${e.displayDate}`;
+    document.getElementById('page-desc').content = e.description;
+
+    // Hero content
+    document.getElementById('hero-event-name').textContent     = e.name;
+    document.getElementById('hero-tagline-inline').textContent = e.tagline;
+    document.getElementById('hero-date').textContent           = e.displayDateRange;
+    document.getElementById('hero-location').textContent       = e.location;
+    document.getElementById('hero-hours').textContent          = e.stats.hours;
+    document.getElementById('status-badge').innerHTML          = getStatusBadge();
+
+    // About section
+    document.getElementById('about-event-name').textContent = e.name;
+    document.getElementById('about-desc').textContent       = e.description;
+
+    // About stats mini cards
+    const miniStats = [
+      { num: e.stats.participants, label: 'Participants', icon: '👥' },
+      { num: e.stats.prizes,       label: 'In Prizes',   icon: '🏆' },
+      { num: e.stats.mentors,      label: 'Mentors',     icon: '🧑‍💻' },
+      { num: e.stats.hours + 'h',  label: 'Non-stop',    icon: '⏱' },
+    ];
+    document.getElementById('about-stats-mini').innerHTML = miniStats.map(s => `
+      <div style="background:rgba(0,85,162,0.08);border:1px solid var(--clr-border);border-radius:12px;padding:1.25rem;text-align:center">
+        <div style="font-size:1.5rem;margin-bottom:0.4rem">${s.icon}</div>
+        <div style="font-family:var(--font-heading);font-size:1.5rem;font-weight:800;background:var(--grad-cta);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">${s.num}</div>
+        <div style="font-size:0.8rem;color:var(--clr-text-muted)">${s.label}</div>
+      </div>`).join('');
+
+    // CTA
+    document.getElementById('cta-date-note').textContent = `📅 ${e.displayDateRange} · ${e.location}`;
+
+    // Render components
+    initCountdown('countdown-container');
+    renderStats('stats-grid');
+    renderFeaturedChallenges('featured-challenges', 3);
+    renderFeaturedJudges('featured-judges', 4);
+    renderHomepageSponsors('homepage-sponsors');
+
+    // Registration button label
+    if (!e.registrationOpen) {
+      document.querySelectorAll('[id*="cta-reg"],[id*="hero-cta-reg"]').forEach(btn => {
+        btn.textContent = 'Registration Opening Soon';
+        btn.style.opacity = '0.7';
+        btn.href = '#';
+      });
+    }
+  });
+</script>
+</body>
+</html>

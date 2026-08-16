@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsors — HackSJSU</title>
+  <meta name="description" content="HackSJSU sponsors — the companies and organizations making this hackathon possible. Learn about sponsorship opportunities.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Partners & Supporters</span>
+    <h1>Our <span class="gradient-text">Sponsors</span></h1>
+    <p>HackSJSU would not be possible without the incredible support of our sponsors. They bring resources, mentors, challenges, and opportunities directly to students.</p>
+  </div>
+</section>
+
+<!-- All Sponsors -->
+<section class="section">
+  <div class="container">
+    <div id="all-sponsors"></div>
+  </div>
+</section>
+
+<!-- Why Sponsor -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Sponsor Benefits</span>
+      <h2>Why Sponsor <span class="gradient-text" id="why-name"></span>?</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🎓</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Recruit Top Talent</h4>
+        <p style="font-size:0.9rem">Meet <span id="stats-participants"></span> of SJSU's brightest students. Sponsor hackers are some of the most driven, self-motivated engineers out there.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🧪</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Showcase Your Tech</h4>
+        <p style="font-size:0.9rem">Run a sponsored challenge, provide API credits, or demo your platform to hundreds of motivated developers building real solutions.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">💼</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Brand Visibility</h4>
+        <p style="font-size:0.9rem">Your brand featured prominently on the website, event materials, t-shirts, and social media reaching thousands of students.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🌉</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Community Impact</h4>
+        <p style="font-size:0.9rem">Invest in the next generation of Silicon Valley engineers. Many HackSJSU alumni go on to work at top tech companies — or start their own.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🏆</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Name a Challenge</h4>
+        <p style="font-size:0.9rem">Gold and Platinum sponsors can run a branded challenge track with a dedicated prize pool, judging panel, and exclusive branding.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🤝</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Partnership with SJSU</h4>
+        <p style="font-size:0.9rem">Build or deepen your academic partnership with San Jose State University, one of Silicon Valley's premier public universities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sponsorship Tiers -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Tiers</span>
+      <h2>Sponsorship <span class="gradient-text">Packages</span></h2>
+      <p>Choose the tier that fits your goals. Custom packages are available.</p>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;min-width:600px">
+        <thead>
+          <tr style="border-bottom:1px solid var(--clr-border)">
+            <th style="padding:1rem;text-align:left;font-family:var(--font-heading);color:var(--clr-text-muted);font-size:0.85rem">Benefit</th>
+            <th style="padding:1rem;text-align:center;font-family:var(--font-heading);color:#CD7F32">🥉 Bronze</th>
+            <th style="padding:1rem;text-align:center;font-family:var(--font-heading);color:#C0C0C0">🥈 Silver</th>
+            <th style="padding:1rem;text-align:center;font-family:var(--font-heading);color:#FFD700">🥇 Gold</th>
+            <th style="padding:1rem;text-align:center;font-family:var(--font-heading);color:var(--clr-secondary)">💎 Platinum</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${[
+            ['Logo on website',          '✓','✓','✓','✓'],
+            ['Logo on t-shirt',          '','✓','✓','✓'],
+            ['Social media mention',      '✓','✓','✓','✓'],
+            ['Recruiter table at event',  '','✓','✓','✓'],
+            ['Branded challenge track',   '','','✓','✓'],
+            ['Speaking slot',             '','','','✓'],
+            ['Workshop slot',             '','','✓','✓'],
+            ['Custom swag in bag',        '','','✓','✓'],
+            ['Judge / mentor seats',      '1','2','3','5+'],
+            ['Resume book access',        '','','✓','✓'],
+          ].map(([benefit,...vals]) => `
+            <tr style="border-bottom:1px solid var(--clr-border)">
+              <td style="padding:0.85rem 1rem;font-size:0.9rem;color:var(--clr-text-muted)">${benefit}</td>
+              ${vals.map(v => `<td style="padding:0.85rem;text-align:center;font-size:0.9rem;color:${v==='✓'?'#00C864':'var(--clr-text-muted)'}">${v||'—'}</td>`).join('')}
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Become a Sponsor CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Become a <span class="gradient-text">Sponsor</span></h2>
+      <p id="sponsor-cta-text"></p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold">Contact Us to Sponsor</a>
+        <a href="about.html" class="btn btn-outline">Learn About the Event</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('why-name').textContent          = CONFIG.event.name;
+    document.getElementById('stats-participants').textContent = CONFIG.event.stats.participants;
+    document.getElementById('sponsor-cta-text').textContent  = CONFIG.about.sponsorCTA;
+    renderSponsors('all-sponsors');
+    initFadeIn();
+  });
+</script>
+</body>
+</html>

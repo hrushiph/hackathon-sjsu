@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule — HackSJSU</title>
+  <meta name="description" content="Full event schedule and agenda for HackSJSU — workshops, hacking windows, demos, and closing ceremony.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Event Timeline</span>
+    <h1>Event <span class="gradient-text">Schedule</span></h1>
+    <p>Two packed days of hacking, workshops, mentoring, and celebration.</p>
+  </div>
+</section>
+
+<!-- Schedule Legend -->
+<section class="section-sm">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.5rem">
+      <span class="timeline-type-badge type-keynote">keynote</span>
+      <span class="timeline-type-badge type-hacking">hacking</span>
+      <span class="timeline-type-badge type-workshop">workshop</span>
+      <span class="timeline-type-badge type-mentoring">mentoring</span>
+      <span class="timeline-type-badge type-judging">judging</span>
+      <span class="timeline-type-badge type-logistics">food &amp; logistics</span>
+      <span class="timeline-type-badge type-event">milestone</span>
+    </div>
+    <p style="font-size:0.85rem">Schedule is subject to change. Follow our social channels for updates.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div id="schedule-container"></div>
+  </div>
+</section>
+
+<!-- Quick Tips -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Pro Tips</span>
+      <h2>Make the Most of <span class="gradient-text">HackSJSU</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🧠</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Come Prepared</h4>
+        <p style="font-size:0.9rem">Have your dev environment set up before the event. Install your IDE, set up your accounts (OpenAI, GitHub, etc.), and bring all your cables.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🤝</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Use the Mentors</h4>
+        <p style="font-size:0.9rem">Our mentors are there to help! Sign up for office hours early. They can unstick you in minutes and provide industry-level feedback.</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🎯</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Scope Wisely</h4>
+        <p style="font-size:0.9rem">A focused, polished project beats a sprawling, incomplete one every time. Plan your MVP early and save time for your pitch and demo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Got Your <span class="gradient-text">Spot?</span></h2>
+      <p>Don't wait — registration fills up fast. Secure your place at HackSJSU today.</p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn btn-gold">Register Now</a>
+        <a href="challenges.html" class="btn btn-outline">Explore Challenges</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    renderSchedule('schedule-container');
+    initFadeIn();
+  });
+</script>
+</body>
+</html>

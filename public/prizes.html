@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prizes — HackSJSU</title>
+  <meta name="description" content="HackSJSU prize pool — $20,000+ in cash prizes, hardware, and career opportunities. See all overall, track, and special awards.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Awards & Recognition</span>
+    <h1>Win Big at <span class="gradient-text" id="ph-name"></span></h1>
+    <p id="ph-prizes-total"></p>
+  </div>
+</section>
+
+<!-- Overall Prizes Podium -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Top Awards</span>
+      <h2>Overall <span class="gradient-text">Prize Podium</span></h2>
+      <p>The top three projects overall — across all tracks — win these awards.</p>
+    </div>
+    <div class="prizes-podium" id="prizes-overall"></div>
+  </div>
+</section>
+
+<!-- Track Prizes -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Per Track</span>
+      <h2>Track <span class="gradient-text">Prizes</span></h2>
+      <p>Every challenge track has its own dedicated prize pool, judged separately.</p>
+    </div>
+    <div class="track-prizes-grid" id="prizes-tracks"></div>
+    <div style="margin-top:1.5rem;padding:1.25rem;background:rgba(0,85,162,0.08);border:1px solid rgba(0,85,162,0.2);border-radius:12px;max-width:600px;margin-left:auto;margin-right:auto">
+      <p style="text-align:center;font-size:0.9rem">💡 <strong>Note:</strong> A project can win both an overall prize and a track prize. Multiple awards can be won!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Special Awards -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Special Recognition</span>
+      <h2>Special <span class="gradient-text">Awards</span></h2>
+      <p>Additional awards celebrating outstanding achievement in specific areas.</p>
+    </div>
+    <div class="grid-2" id="prizes-special"></div>
+  </div>
+</section>
+
+<!-- What Else You Win -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Beyond Cash</span>
+      <h2>Every Participant <span class="gradient-text">Wins</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card text-center fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🎽</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Swag Bag</h4>
+        <p style="font-size:0.9rem">Every registered participant gets an HackSJSU swag bag with t-shirt, stickers, and sponsor goodies.</p>
+      </div>
+      <div class="card text-center fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">📜</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Certificate</h4>
+        <p style="font-size:0.9rem">All project submitters receive a digital certificate of participation — a great portfolio addition.</p>
+      </div>
+      <div class="card text-center fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🤝</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Networking</h4>
+        <p style="font-size:0.9rem">Connect with HP engineers, SJSU faculty, and fellow builders. Many hackathon projects have become real startups!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Compete for <span class="gradient-text" id="cta-prizes"></span></h2>
+      <p>Register today and start thinking about your winning idea.</p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn btn-gold">Register Now — Free</a>
+        <a href="challenges.html" class="btn btn-outline">See Challenges</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('ph-name').textContent        = CONFIG.event.name;
+    document.getElementById('ph-prizes-total').textContent = CONFIG.event.stats.prizes + ' in prizes across overall, track, and special awards.';
+    document.getElementById('cta-prizes').textContent     = CONFIG.event.stats.prizes;
+    renderPrizes();
+    initFadeIn();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# ─── OS & Editor ───────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ─── IDE / Editor ──────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ─── Node (if you ever add tooling) ────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# ─── Firebase ──────────────────────────────────────────────
+# Keep firebase.json and .firebaserc (no secrets in them)
+# Ignore local emulator data
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# ─── Environment / Secrets ─────────────────────────────────
+# NEVER commit API keys or secrets
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+*.secret
+secrets.js
+secrets.json
+
+# ─── Build output ──────────────────────────────────────────
+dist/
+build/
+out/
+.cache/
+
+# ─── Logs ──────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Misc ──────────────────────────────────────────────────
+*.bak
+*.tmp

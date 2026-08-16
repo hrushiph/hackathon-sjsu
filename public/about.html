@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — HackSJSU</title>
+  <meta name="description" content="Learn about HackSJSU — SJSU's premier AI hackathon co-hosted with HP Inc. Our mission, vision, and why you should participate.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">About the Event</span>
+    <h1>About <span class="gradient-text" id="ph-name"></span></h1>
+    <p id="ph-desc"></p>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+      <div class="card">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🎯</div>
+        <h3 style="font-family:var(--font-heading);margin-bottom:0.75rem">Our Mission</h3>
+        <p id="about-mission" style="line-height:1.8"></p>
+      </div>
+      <div class="card">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🌟</div>
+        <h3 style="font-family:var(--font-heading);margin-bottom:0.75rem">Our Vision</h3>
+        <p id="about-vision" style="line-height:1.8"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Join -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Reasons to Join</span>
+      <h2>Why Participate in <span class="gradient-text" id="why-name"></span>?</h2>
+    </div>
+    <div class="why-join-grid" id="why-join-grid"></div>
+  </div>
+</section>
+
+<!-- Partners -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Co-Hosts</span>
+      <h2>Hosted By</h2>
+      <p>HackSJSU is made possible through the incredible partnership of SJSU and HP.</p>
+    </div>
+
+    <div class="about-partner-card fade-in">
+      <div class="about-partner-logo">🎓</div>
+      <div>
+        <div class="about-partner-name">San Jose State University</div>
+        <div class="about-partner-desc" id="about-sjsu"></div>
+        <a href="https://sjsu.edu" target="_blank" rel="noopener" class="btn btn-outline btn-sm mt-2">Visit SJSU →</a>
+      </div>
+    </div>
+
+    <div class="about-partner-card fade-in">
+      <div class="about-partner-logo">🖨️</div>
+      <div>
+        <div class="about-partner-name">HP Inc.</div>
+        <div class="about-partner-desc" id="about-hp"></div>
+        <a href="https://hp.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm mt-2">Visit HP →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Event Details -->
+<section class="section" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Event Details</span>
+      <h2>What to Expect</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">📅</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Date</h4>
+        <p id="ev-date" style="font-size:1.05rem;color:var(--clr-text)"></p>
+        <p id="ev-time" style="font-size:0.9rem;margin-top:0.25rem">8:00 AM – 4:00 PM</p>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">📍</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Location</h4>
+        <p id="ev-location" style="font-size:1.05rem;color:var(--clr-text)"></p>
+        <a id="ev-map-link" href="#" target="_blank" rel="noopener"
+           style="font-size:0.85rem;color:var(--clr-secondary);margin-top:0.25rem;display:block">
+          Open in Google Maps →
+        </a>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🏆</div>
+        <h4 style="font-family:var(--font-heading);margin-bottom:0.5rem">Prize Pool</h4>
+        <p id="ev-prizes" style="font-size:1.05rem;color:var(--clr-text)"></p>
+        <a href="prizes.html" style="font-size:0.85rem;color:var(--clr-secondary);margin-top:0.25rem;display:block">
+          See prize breakdown →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organizers -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto;text-align:center">
+      <span class="section-tag">Organizers</span>
+      <h2>About the <span class="gradient-text">Team</span></h2>
+      <p id="about-organizers" style="font-size:1.05rem;line-height:1.8;margin-top:1.25rem"></p>
+    </div>
+
+    <div style="margin-top:3rem;text-align:center">
+      <p style="color:var(--clr-text-muted);margin-bottom:1.5rem" id="sponsor-cta"></p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="register.html" class="btn btn-primary">Register Now</a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        <a href="sponsors.html" class="btn btn-outline">Sponsor HackSJSU</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Ready to <span class="gradient-text">Build?</span></h2>
+      <p id="about-cta-desc"></p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn btn-gold">🚀 Register — It's Free</a>
+        <a href="challenges.html" class="btn btn-outline">Explore Challenges</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const e = CONFIG.event;
+    const a = CONFIG.about;
+    document.getElementById('ph-name').textContent       = e.name;
+    document.getElementById('ph-desc').textContent       = e.shortDesc;
+    document.getElementById('about-mission').textContent = a.mission;
+    document.getElementById('about-vision').textContent  = a.vision;
+    document.getElementById('why-name').textContent      = e.name;
+    document.getElementById('about-sjsu').textContent    = a.aboutSJSU;
+    document.getElementById('about-hp').textContent      = a.aboutHP;
+    document.getElementById('ev-date').textContent       = e.displayDateRange;
+    document.getElementById('ev-location').textContent   = e.locationFull;
+    document.getElementById('ev-map-link').href          = e.mapUrl;
+    document.getElementById('ev-prizes').textContent     = e.stats.prizes + ' in prizes';
+    document.getElementById('about-organizers').textContent = a.organizers;
+    document.getElementById('sponsor-cta').textContent   = a.sponsorCTA;
+    document.getElementById('about-cta-desc').textContent  = e.shortDesc + '. Join ' + e.stats.participants + ' students competing for ' + e.stats.prizes + ' in prizes.';
+    renderWhyJoin('why-join-grid');
+    initFadeIn();
+  });
+</script>
+</body>
+</html>
