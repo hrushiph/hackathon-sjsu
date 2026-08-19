@@ -113,6 +113,20 @@ const CONFIG = {
   // imageFile must match the exact filename (case-sensitive).
   // If the image is missing, placeholder.jpg is used automatically.
   // ─────────────────────────────────────────────
+  // ─── KEYNOTE SPEAKERS ─────────────────────────────
+  // Photos: public/assets/speakers/<imageFile>
+  keynoteSpeakers: [
+    {
+      name:      "Siddhartha Dixit",
+      title:     "Chief Technology Officer, SVP",
+      company:   "iTradeNetwork",
+      imageFile: "siddhartha_dixit.jpg",   // file in assets/speakers/
+      bio:       "Visionary tech executive and CTO at iTradeNetwork. Expert in AI, supply chain technology, and enterprise software. Generously offering onsite interviews to select SJSU students.",
+      linkedin:  "#",
+      tag:       "Keynote Speaker",
+    },
+  ],
+
   // ─── JUDGES ──────────────────────────────────────────────
   // Photos: drop image file in public/assets/judges/ and set imageFile below.
   // Naming convention: firstname_lastname.jpg (all lowercase, underscores)
@@ -173,6 +187,36 @@ const CONFIG = {
   // Image files go in: public/assets/mentors/
   // Same naming convention as judges.
   // ─────────────────────────────────────────────
+  // ─── ADVISORY PANEL ──────────────────────────────
+  // Photos: public/assets/mentors/<imageFile> (shared folder with mentors)
+  // These appear on the landing page as a grid, same style as judges.
+  advisoryPanel: [
+    {
+      name:      "Danny Steyer",
+      title:     "[Title — e.g. Director / VP]",  // ← Update with real title
+      company:   "[Company]",                     // ← Update with real company
+      imageFile: "danny_steyer.jpg",              // ← Drop photo in assets/mentors/
+      bio:       "[Short bio for Danny Steyer]",  // ← Update with real bio
+      linkedin:  "#",
+    },
+    {
+      name:      "Prof. Simon Sim",
+      title:     "Chair, Applied Data Science",
+      company:   "San Jose State University",
+      imageFile: "prof_simon_sim.jpg",
+      bio:       "Chair of the Applied Data Science program at SJSU. Leading academic voice in data science education and applied AI research in Silicon Valley.",
+      linkedin:  "#",
+    },
+    {
+      name:      "Himant Goyal",
+      title:     "Senior Product Manager",
+      company:   "Salesforce",
+      imageFile: "himant_goyal.jpg",
+      bio:       "SJSU alumnus and Senior PM at Salesforce. Passionate about product strategy, AI-driven innovation, and nurturing the next generation of tech talent.",
+      linkedin:  "#",
+    },
+  ],
+
   // ─── ADVISORY BOARD / MENTORS ────────────────────────────
   // These are the Advisory Board members from the GuestList sheet.
   // Photos: public/assets/mentors/<imageFile>

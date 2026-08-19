@@ -429,6 +429,63 @@ function renderFeaturedJudges(containerId, limit = 4) {
   renderJudges(containerId, limit);
 }
 
+// ─── Keynote Speakers Grid ──────────────────────────────────
+function renderKeynoteSpeakers(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const speakers = CONFIG.keynoteSpeakers || [];
+  if (!speakers.length) {
+    el.innerHTML = '<p class="text-center" style="opacity:.5">Keynote speakers to be announced.</p>';
+    return;
+  }
+  el.innerHTML = speakers.map(s => `
+    <div class="person-card person-card--keynote fade-in">
+      <div class="keynote-badge">🎤 ${s.tag || 'Keynote Speaker'}</div>
+      <img class="person-card-img"
+           src="assets/speakers/${s.imageFile}"
+           alt="${s.name}"
+           onerror="this.src='assets/judges/placeholder.jpg'">
+      <div class="person-card-body">
+        <div class="person-card-name">${s.name}</div>
+        <div class="person-card-title">${s.title}</div>
+        <div class="person-card-company">${s.company}</div>
+        ${s.bio ? `<div class="person-card-bio">${s.bio}</div>` : ''}
+        <div class="person-card-links">
+          ${s.linkedin && s.linkedin !== '#' ? `<a href="${s.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
+        </div>
+      </div>
+    </div>`).join('');
+  initFadeIn();
+}
+
+// ─── Advisory Panel Grid ───────────────────────────────────
+function renderAdvisoryPanel(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const panel = CONFIG.advisoryPanel || [];
+  if (!panel.length) {
+    el.innerHTML = '<p class="text-center" style="opacity:.5">Advisory panel to be announced.</p>';
+    return;
+  }
+  el.innerHTML = panel.map(a => `
+    <div class="person-card fade-in">
+      <img class="person-card-img"
+           src="assets/mentors/${a.imageFile}"
+           alt="${a.name}"
+           onerror="this.src='assets/mentors/placeholder.jpg'">
+      <div class="person-card-body">
+        <div class="person-card-name">${a.name}</div>
+        <div class="person-card-title">${a.title}</div>
+        <div class="person-card-company">${a.company}</div>
+        ${a.bio ? `<div class="person-card-bio">${a.bio}</div>` : ''}
+        <div class="person-card-links">
+          ${a.linkedin && a.linkedin !== '#' ? `<a href="${a.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
+        </div>
+      </div>
+    </div>`).join('');
+  initFadeIn();
+}
+
 // ─── Homepage Challenge Preview ────────────────────────────
 function renderFeaturedChallenges(containerId, limit = 3) {
   renderChallenges(containerId, limit);
@@ -455,10 +512,18 @@ function renderHomepageSponsors(containerId) {
   </div>`;
 }
 
-// ─── Boot ──────────────────────────────────────────────────
+// ─── Boot ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   renderNav();
   renderFooter();
   initFadeIn();
   initContactForm();
+
+  // Homepage-only sections (each targets a specific element id)
+  renderStats('stats-grid');
+  renderFeaturedChallenges('featured-challenges', 3);
+  renderKeynoteSpeakers('keynote-speakers');
+  renderFeaturedJudges('featured-judges', 999);
+  renderAdvisoryPanel('advisory-panel');
+  renderHomepageSponsors('homepage-sponsors');
 });

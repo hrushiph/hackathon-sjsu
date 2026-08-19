@@ -545,7 +545,43 @@ p  { color: var(--clr-text-muted); }
   color: var(--clr-text);
 }
 
-/* ── Challenge Cards ──────────────────────────────────────── */
+/* ── Keynote Speaker Cards ────────────────────────────────── */
+.keynote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  gap: 2rem;
+  justify-content: center;
+}
+.person-card--keynote {
+  border-color: rgba(229,168,35,0.4);
+  background: linear-gradient(160deg, var(--clr-card) 60%, rgba(229,168,35,0.06));
+  max-width: 380px;
+}
+.person-card--keynote:hover {
+  border-color: rgba(229,168,35,0.8);
+  box-shadow: 0 0 40px rgba(229,168,35,0.25), var(--shadow-glow);
+}
+.person-card--keynote .person-card-img {
+  aspect-ratio: 4 / 3;
+  object-position: center top;
+}
+.keynote-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a0f00;
+  background: linear-gradient(135deg, #E5A823, #FFD700);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 12px rgba(229,168,35,0.5);
+  z-index: 2;
+}
+
+
 .challenge-card {
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
