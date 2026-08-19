@@ -193,11 +193,20 @@ const CONFIG = {
   advisoryPanel: [
     {
       name:      "Danny Steyer",
-      title:     "[Title — e.g. Director / VP]",  // ← Update with real title
-      company:   "[Company]",                     // ← Update with real company
-      imageFile: "danny_steyer.jpg",              // ← Drop photo in assets/mentors/
-      bio:       "[Short bio for Danny Steyer]",  // ← Update with real bio
+      title:     "Advisory Board Member",
+      company:   "HackSJSU",
+      imageFile: "danny_steyer.jpg",
+      bio:       "Esteemed advisor and champion of student innovation at HackSJSU. Bringing deep expertise and strategic guidance to shape the hackathon's vision.",
       linkedin:  "#",
+    },
+    {
+      name:      "Himant Goyal",
+      title:     "Sr. Product Manager",
+      company:   "Salesforce",
+      imageFile: "himant_goyal.jpg",
+      bio:       "SJSU alumnus and Senior PM at Salesforce. Passionate about product strategy, AI-driven innovation, and nurturing the next generation of tech talent.",
+      linkedin:  "#",
+      tag:       "SJSU Alumni",
     },
     {
       name:      "Prof. Simon Sim",
@@ -208,14 +217,15 @@ const CONFIG = {
       linkedin:  "#",
     },
     {
-      name:      "Himant Goyal",
-      title:     "Senior Product Manager",
-      company:   "Salesforce",
-      imageFile: "himant_goyal.jpg",
-      bio:       "SJSU alumnus and Senior PM at Salesforce. Passionate about product strategy, AI-driven innovation, and nurturing the next generation of tech talent.",
+      name:      "Jorge Rick Gosalvez",
+      title:     "Engineer",
+      company:   "HP AI Labs",
+      imageFile: "rick_gosalvez.jpg",
+      bio:       "AI researcher and engineer at HP AI Labs, bringing cutting-edge artificial intelligence research and enterprise technology expertise to advise our participants.",
       linkedin:  "#",
     },
   ],
+
 
   // ─── ADVISORY BOARD / MENTORS ────────────────────────────
   // These are the Advisory Board members from the GuestList sheet.

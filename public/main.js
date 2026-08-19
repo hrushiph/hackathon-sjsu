@@ -477,6 +477,7 @@ function renderAdvisoryPanel(containerId) {
         <div class="person-card-name">${a.name}</div>
         <div class="person-card-title">${a.title}</div>
         <div class="person-card-company">${a.company}</div>
+        ${a.tag ? `<span class="person-card-tag">⭐ ${a.tag}</span>` : ''}
         ${a.bio ? `<div class="person-card-bio">${a.bio}</div>` : ''}
         <div class="person-card-links">
           ${a.linkedin && a.linkedin !== '#' ? `<a href="${a.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
