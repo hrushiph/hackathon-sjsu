@@ -113,53 +113,57 @@ const CONFIG = {
   // imageFile must match the exact filename (case-sensitive).
   // If the image is missing, placeholder.jpg is used automatically.
   // ─────────────────────────────────────────────
+  // ─── JUDGES ──────────────────────────────────────────────
+  // Photos: drop image file in public/assets/judges/ and set imageFile below.
+  // Naming convention: firstname_lastname.jpg (all lowercase, underscores)
+  // Photos from edgehackathon.com: upload the actual photo replacing the placeholder.
   judges: [
     {
-      name:      "[Judge First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",       // ← Replace: e.g., "jane_doe.jpg"
-      bio:       "[Short bio — 1 to 2 sentences about this judge's background and expertise.]",
+      name:      "Vivek Kompella",
+      title:     "Director, Enterprise Data & AI",
+      company:   "Informatica",
+      imageFile: "vivek_kompella.jpg",      // ← Upload real photo from edgehackathon.com or LinkedIn
+      bio:       "Seasoned data science leader with extensive experience in enterprise AI, data architecture, and building large-scale ML platforms at top tech companies.",
+      linkedin:  "https://www.linkedin.com/in/vivek-kompella/",
+    },
+    {
+      name:      "Rengarajan Margasahayam",
+      title:     "Senior Director, Software Engineering",
+      company:   "Salesforce",
+      imageFile: "rengarajan_margasahayam.jpg",  // ← Upload real photo
+      bio:       "Engineering leader at Salesforce driving large-scale software platform initiatives. Deep expertise in distributed systems and cloud-native engineering.",
       linkedin:  "#",
     },
     {
-      name:      "[Judge First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      bio:       "[Short bio — 1 to 2 sentences about this judge's background and expertise.]",
+      name:      "Rohith Iyengar",
+      title:     "Senior AI Engineer",
+      company:   "HP AI Labs",
+      imageFile: "rohith_iyengar.jpg",      // ← Upload real photo
+      bio:       "SJSU Alumni and AI engineer at HP Labs working on cutting-edge AI and machine learning applications for enterprise and edge computing.",
       linkedin:  "#",
     },
     {
-      name:      "[Judge First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      bio:       "[Short bio — 1 to 2 sentences about this judge's background and expertise.]",
+      name:      "Hariharasubramanian C.S.",
+      title:     "Distinguished Engineer",
+      company:   "Zededa",
+      imageFile: "hariharasubramanian_cs.jpg",  // ← Upload real photo
+      bio:       "Distinguished Engineer at Zededa, a Silicon Valley-based edge AI company. Expert in edge computing, distributed systems, and AI infrastructure.",
       linkedin:  "#",
     },
     {
-      name:      "[Judge First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      bio:       "[Short bio — 1 to 2 sentences about this judge's background and expertise.]",
+      name:      "Hrushikesh Pokala",
+      title:     "Senior Software Development Engineer",
+      company:   "Equifax",
+      imageFile: "hrushikesh_pokala.jpg",   // ← Upload real photo
+      bio:       "MSADI alumnus at SJSU and senior engineer at Equifax. Brings experience in financial data platforms and AI-driven insights at enterprise scale.",
       linkedin:  "#",
     },
     {
-      name:      "[Judge First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      bio:       "[Short bio — 1 to 2 sentences about this judge's background and expertise.]",
-      linkedin:  "#",
-    },
-    {
-      name:      "[Judge First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      bio:       "[Short bio — 1 to 2 sentences about this judge's background and expertise.]",
+      name:      "Siddhartha Dixit",
+      title:     "Chief Technology Officer, SVP",
+      company:   "iTradeNetwork",
+      imageFile: "siddhartha_dixit.jpg",    // ← Upload real photo
+      bio:       "CTO and SVP at iTradeNetwork. Visionary tech executive with expertise in supply chain technology and AI. Willing to extend onsite interviews to students.",
       linkedin:  "#",
     },
   ],
@@ -169,53 +173,32 @@ const CONFIG = {
   // Image files go in: public/assets/mentors/
   // Same naming convention as judges.
   // ─────────────────────────────────────────────
+  // ─── ADVISORY BOARD / MENTORS ────────────────────────────
+  // These are the Advisory Board members from the GuestList sheet.
+  // Photos: public/assets/mentors/<imageFile>
   mentors: [
     {
-      name:      "[Mentor First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",       // ← Replace: e.g., "mentor_john.jpg"
-      expertise: "[Area of Expertise, e.g., Machine Learning, Web Dev]",
+      name:      "Prof. Simon Sim",
+      title:     "Chair, Applied Data Science",
+      company:   "San Jose State University",
+      imageFile: "prof_simon_sim.jpg",     // ← Upload photo
+      expertise: "Applied Data Science & AI Education",
       linkedin:  "#",
     },
     {
-      name:      "[Mentor First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      expertise: "[Area of Expertise]",
+      name:      "Himant Goyal",
+      title:     "Senior Product Manager",
+      company:   "Salesforce",
+      imageFile: "himant_goyal.jpg",       // ← Upload photo
+      expertise: "Product Strategy & AI",
       linkedin:  "#",
     },
     {
-      name:      "[Mentor First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      expertise: "[Area of Expertise]",
-      linkedin:  "#",
-    },
-    {
-      name:      "[Mentor First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      expertise: "[Area of Expertise]",
-      linkedin:  "#",
-    },
-    {
-      name:      "[Mentor First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      expertise: "[Area of Expertise]",
-      linkedin:  "#",
-    },
-    {
-      name:      "[Mentor First Last]",
-      title:     "[Job Title]",
-      company:   "[Company or University]",
-      imageFile: "placeholder.jpg",
-      expertise: "[Area of Expertise]",
+      name:      "Rick Gosalvez",
+      title:     "Advisory Board",
+      company:   "HP AI Labs",
+      imageFile: "rick_gosalvez.jpg",      // ← Upload photo
+      expertise: "AI Research & Enterprise Tech",
       linkedin:  "#",
     },
   ],
@@ -242,43 +225,34 @@ const CONFIG = {
     ],
     gold: [
       {
-        name:        "[Gold Sponsor Name]",
-        imageFile:   "placeholder_sponsor.png",   // Replace with actual logo file
+        name:        "iTradeNetwork",
+        imageFile:   "itradenetwork.png",        // ← Add logo to assets/sponsors/
         url:         "#",
-        description: "[Gold sponsor description or tagline]",
+        description: "Enterprise supply chain technology sponsor",
       },
     ],
     silver: [
       {
-        name:        "[Silver Sponsor]",
-        imageFile:   "placeholder_sponsor.png",
-        url:         "#",
+        name:        "SJSU Applied Data Science",
+        imageFile:   "sjsu_ads.png",             // ← Add logo to assets/sponsors/
+        url:         "https://www.sjsu.edu/datascience/",
+        description: "SJSU's Applied Data Science program",
       },
       {
-        name:        "[Silver Sponsor]",
-        imageFile:   "placeholder_sponsor.png",
-        url:         "#",
+        name:        "SJSU AI Institute",
+        imageFile:   "sjsu_ai.png",              // ← Add logo to assets/sponsors/
+        url:         "https://www.sjsu.edu/aiml/",
+        description: "SJSU Artificial Intelligence & Machine Learning Institute",
       },
     ],
-    bronze: [
-      {
-        name:        "[Bronze Sponsor]",
-        imageFile:   "placeholder_sponsor.png",
-        url:         "#",
-      },
-      {
-        name:        "[Bronze Sponsor]",
-        imageFile:   "placeholder_sponsor.png",
-        url:         "#",
-      },
-      {
-        name:        "[Bronze Sponsor]",
-        imageFile:   "placeholder_sponsor.png",
-        url:         "#",
-      },
-    ],
+    bronze: [],
     community: [
-      // Add community partners here
+      {
+        name:        "SJSU Cybersecurity Center",
+        imageFile:   "sjsu_cybersecurity.png",   // ← Add logo to assets/sponsors/
+        url:         "https://www.sjsu.edu/cybersecurity/",
+        description: "Cybersecurity research and education",
+      },
     ],
   },
 
