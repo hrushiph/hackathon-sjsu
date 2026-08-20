@@ -1,5 +1,5 @@
 // =============================================================
-//  HackSJSU — Master Configuration File
+//  SJSUHack — Master Configuration File
 //  ---------------------------------------------------------------
 //  ALL website content, colors, and data lives here.
 //  Update this file to change anything on the site — no HTML
@@ -45,21 +45,27 @@ const CONFIG = {
   // EVENT META — Core event information
   // ─────────────────────────────────────────────
   event: {
-    name:             "HackSJSU",
+    name:             "SJSUHack",
     edition:          "2026",
     tagline:          "Build. Innovate. Shape the Future.",
-    description:      "HackSJSU is San Jose State University's flagship 24-hour hackathon — co-powered by HP. Students from across California tackle real-world challenges using AI and emerging technologies, competing for $20,000+ in prizes.",
-    shortDesc:        "SJSU's premier 24-hour hackathon, powered by HP",
+    description:      "SJSUHack is San Jose State University's flagship hackathon — co-powered by HP. SJSU students tackle real-world challenges using AI and emerging technologies, competing for $10,000 in prizes.",
+    shortDesc:        "SJSU's premier hackathon, powered by HP",
+
+    // Eligibility
+    eligibility:      "Open to currently enrolled SJSU students only.",
+    teamSize:         "2 to 5 members",
 
     // Dates (ISO format for countdown timer; displayDate for human-readable)
-    date:             "2026-09-02T08:00:00",   // Event start (used by countdown)
-    endDate:          "2026-09-03T16:00:00",   // Event end
-    displayDate:      "September 2, 2026",
-    displayDateRange: "September 2–3, 2026",
+    // Day 1 (Sept 25): Hackathon — teams hack all day
+    // Day 2 (Sept 26): Keynote, presentations & awards
+    date:             "2026-09-25T08:00:00",   // Event start (used by countdown)
+    endDate:          "2026-09-26T17:00:00",   // Event end
+    displayDate:      "September 25, 2026",
+    displayDateRange: "September 25–26, 2026",
 
-    location:         "San Jose State University",
-    locationFull:     "Event Center, San Jose State University, San Jose, CA 95192",
-    mapUrl:           "https://maps.google.com/?q=SJSU+Event+Center+San+Jose",
+    location:         "SJSU ISB Building",
+    locationFull:     "ISB Building, San Jose State University, San Jose, CA 95192",
+    mapUrl:           "https://maps.google.com/?q=SJSU+ISB+Building+San+Jose",
 
     // Registration
     registrationUrl:  "https://forms.google.com/REPLACE_WITH_YOUR_FORM_ID",
@@ -72,18 +78,18 @@ const CONFIG = {
 
     // Stats bar on homepage
     stats: {
-      participants: "500+",
-      prizes:       "$20,000+",
-      mentors:      "30+",
+      participants: "200+",
+      prizes:       "$10,000",
+      mentors:      "10+",
       hours:        "24",
     },
 
     // Social links
     social: {
-      instagram: "#",                       // e.g., https://instagram.com/hacksjsu
-      twitter:   "#",                       // e.g., https://twitter.com/hacksjsu
-      linkedin:  "#",                       // e.g., https://linkedin.com/company/hacksjsu
-      github:    "#",                       // e.g., https://github.com/hacksjsu
+      instagram: "#",                       // e.g., https://instagram.com/sjsuhack
+      twitter:   "#",                       // e.g., https://twitter.com/sjsuhack
+      linkedin:  "#",                       // e.g., https://linkedin.com/company/sjsuhack
+      github:    "#",                       // e.g., https://github.com/sjsuhack
       email:     "hackathon@sjsu.edu",
     },
   },
@@ -188,7 +194,7 @@ const CONFIG = {
   // Same naming convention as judges.
   // ─────────────────────────────────────────────
   // ─── ADVISORY PANEL ──────────────────────────────
-  // Photos: public/assets/mentors/<imageFile> (shared folder with mentors)
+  // Photos: public/assets/mentors/<imageFile>
   // These appear on the landing page as a grid, same style as judges.
   advisoryPanel: [
     {
@@ -226,63 +232,40 @@ const CONFIG = {
     },
   ],
 
-  // NOTE: The advisoryPanel[] array above is the single source of truth
-  // for advisory board members shown on the landing page AND mentors.html.
-  // The mentors[] key below is kept as an alias for backward compatibility.
+  // NOTE: advisoryPanel[] is the single source of truth for advisory/mentors pages.
   mentors: [], // ← Intentionally empty — data lives in advisoryPanel[]
 
   // ─────────────────────────────────────────────
-  // SPONSORS
-  // Image files go in: public/assets/sponsors/
-  // Tiers: platinum | gold | silver | bronze | community
+  // SPONSORS — Single flat list (no tier labels)
+  // Image files go in: public/assets/sponsors/<imageFile>
   // ─────────────────────────────────────────────
-  sponsors: {
-    platinum: [
-      {
-        name:        "San Jose State University",
-        imageFile:   "sjsu.png",                  // Add sjsu.png to assets/sponsors/
-        url:         "https://www.sjsu.edu",
-        description: "Co-host and primary academic sponsor",
-      },
-      {
-        name:        "HP Inc.",
-        imageFile:   "hp.png",                    // Add hp.png to assets/sponsors/
-        url:         "https://www.hp.com",
-        description: "Technology sponsor and co-host",
-      },
-    ],
-    gold: [
-      {
-        name:        "iTradeNetwork",
-        imageFile:   "itradenetwork.png",        // ← Add logo to assets/sponsors/
-        url:         "#",
-        description: "Enterprise supply chain technology sponsor",
-      },
-    ],
-    silver: [
-      {
-        name:        "SJSU Applied Data Science",
-        imageFile:   "sjsu_ads.png",             // ← Add logo to assets/sponsors/
-        url:         "https://www.sjsu.edu/datascience/",
-        description: "SJSU's Applied Data Science program",
-      },
-      {
-        name:        "SJSU AI Institute",
-        imageFile:   "sjsu_ai.png",              // ← Add logo to assets/sponsors/
-        url:         "https://www.sjsu.edu/aiml/",
-        description: "SJSU Artificial Intelligence & Machine Learning Institute",
-      },
-    ],
-    bronze: [],
-    community: [
-      {
-        name:        "SJSU Cybersecurity Center",
-        imageFile:   "sjsu_cybersecurity.png",   // ← Add logo to assets/sponsors/
-        url:         "https://www.sjsu.edu/cybersecurity/",
-        description: "Cybersecurity research and education",
-      },
-    ],
-  },
+  sponsors: [
+    {
+      name:        "San Jose State University",
+      imageFile:   "sjsu.png",
+      url:         "https://www.sjsu.edu",
+      description: "Co-host and primary academic partner",
+    },
+    {
+      name:        "HP Inc.",
+      imageFile:   "hp.png",
+      url:         "https://www.hp.com",
+      description: "Technology sponsor and co-host",
+    },
+    {
+      name:        "iTradeNetwork",
+      imageFile:   "itradenetwork.png",
+      url:         "#",
+      description: "Enterprise supply chain technology sponsor",
+    },
+    {
+      name:        "SJSU Applied Data Science",
+      imageFile:   "sjsu_ads.png",
+      url:         "https://www.sjsu.edu/datascience/",
+      description: "SJSU's Applied Data Science program",
+    },
+  ],
+
 
   // ─────────────────────────────────────────────
   // CHALLENGES / TRACKS
@@ -363,7 +346,7 @@ const CONFIG = {
   ],
 
   // ─────────────────────────────────────────────
-  // PRIZES
+  // PRIZES  (Total pool: $10,000)
   // ─────────────────────────────────────────────
   prizes: {
     overall: [
@@ -384,58 +367,50 @@ const CONFIG = {
         perks:     ["Cash prize split among team", "Swag bundle", "Certificates"],
       },
     ],
-    tracks: [
-      { track: "AI for Social Good",              amount: "$3,000" },
-      { track: "Generative AI & Creative Tech",   amount: "$3,000" },
-      { track: "AI-Powered Productivity",         amount: "$3,000" },
-      { track: "Responsible AI & Ethics",         amount: "$2,000" },
-      { track: "HP Open Innovation Challenge",    amount: "$5,000" },
-    ],
+    tracks: [],   // ← Add track prizes here if applicable
     special: [
-      { award: "🌟 Best First-Timer",   description: "Best project by first-time hackathon participants",     prize: "$500 + swag" },
-      { award: "🎨 Best UX/Design",     description: "Most polished, user-friendly, and visually compelling", prize: "$500 + swag" },
-      { award: "🌍 Most Impactful",     description: "Highest potential real-world impact",                   prize: "$500 + swag" },
-      { award: "🎤 Best Pitch",         description: "Most compelling and clear presentation",                 prize: "$500 + swag" },
+      { award: "🌟 Best First-Timer",   description: "Best project by first-time hackathon participants",     prize: "Swag bundle" },
+      { award: "🎨 Best UX/Design",     description: "Most polished, user-friendly, and visually compelling", prize: "Swag bundle" },
+      { award: "🌍 Most Impactful",     description: "Highest potential real-world impact",                   prize: "Swag bundle" },
+      { award: "🎤 Best Pitch",         description: "Most compelling and clear presentation",                 prize: "Swag bundle" },
     ],
   },
 
   // ─────────────────────────────────────────────
   // SCHEDULE — Event timeline
+  // Day 1 (Sept 25): Hackathon day — teams hack
+  // Day 2 (Sept 26): Keynote, presentations & awards
   // Types: "keynote" | "hacking" | "workshop" | "mentoring" | "logistics" | "judging" | "event"
+  // NOTE: Detailed schedule is being finalized — update times below when ready.
   // ─────────────────────────────────────────────
   schedule: [
     {
-      day:    "Day 1",
-      date:   "September 2, 2026",
+      day:    "Day 1 — Hackathon",
+      date:   "September 25, 2026",
       events: [
-        { time: "8:00 AM",  title: "Check-in & Breakfast",               description: "Arrive, grab your badge and t-shirt, and enjoy a hot breakfast with fellow hackers.",                   type: "logistics",  duration: "60 min" },
-        { time: "9:00 AM",  title: "Opening Ceremony",                   description: "Welcome from SJSU Dean of Engineering and HP leadership. Keynote and challenge kickoff.",              type: "keynote",    duration: "60 min" },
-        { time: "10:00 AM", title: "Team Formation",                     description: "Find your teammates! Use the team-matching board or join the Discord #team-formation channel.",         type: "event",      duration: "30 min" },
-        { time: "10:30 AM", title: "🚀 Hacking Begins!",                 description: "24 hours on the clock. Start building your project. Good luck!",                                        type: "hacking",    duration: "" },
-        { time: "12:00 PM", title: "Lunch",                              description: "Catered lunch served in the main hall. Keep building!",                                                  type: "logistics",  duration: "45 min" },
-        { time: "2:00 PM",  title: "Workshop: Building with AI APIs",    description: "Hands-on session covering OpenAI, Gemini, and LangChain. Presented by HP engineers.",                   type: "workshop",   duration: "60 min" },
-        { time: "4:00 PM",  title: "Workshop: HP Developer Tools",       description: "Deep-dive into HP's developer ecosystem, APIs, and what's available to use in your project.",            type: "workshop",   duration: "60 min" },
-        { time: "6:00 PM",  title: "Dinner",                             description: "Catered dinner. Refuel, recharge, and keep hacking!",                                                    type: "logistics",  duration: "45 min" },
-        { time: "7:00 PM",  title: "Mini-Challenge: Best AI Demo",       description: "Show off your early prototype for fun prizes. Participation is optional.",                               type: "event",      duration: "60 min" },
-        { time: "8:00 PM",  title: "Office Hours with Mentors",          description: "Sign up at the mentor table for 1:1 sessions with our industry mentors.",                                type: "mentoring",  duration: "120 min" },
-        { time: "11:00 PM", title: "🍕 Midnight Snacks",                 description: "Pizza and snacks delivered. Fuel for the night owls!",                                                   type: "logistics",  duration: "30 min" },
+        { time: "8:00 AM",  title: "Check-in & Breakfast",               description: "Arrive, grab your badge and t-shirt, and enjoy breakfast with fellow hackers.",                          type: "logistics",  duration: "60 min" },
+        { time: "9:00 AM",  title: "Orientation & Team Formation",        description: "Welcome briefing, rules overview, and team-matching session for solo participants.",                      type: "event",      duration: "60 min" },
+        { time: "10:00 AM", title: "🚀 Hacking Begins!",                 description: "The clock starts now. Start building your project — good luck!",                                         type: "hacking",    duration: "" },
+        { time: "12:00 PM", title: "Lunch",                              description: "Catered lunch served in the main hall. Keep building!",                                                    type: "logistics",  duration: "45 min" },
+        { time: "2:00 PM",  title: "Workshop: Building with AI APIs",    description: "Hands-on session covering OpenAI, Gemini, and LangChain. Presented by HP engineers.",                     type: "workshop",   duration: "60 min" },
+        { time: "4:00 PM",  title: "Workshop: HP Developer Tools",       description: "Deep-dive into HP's developer ecosystem and HP AI Studio.",                                               type: "workshop",   duration: "60 min" },
+        { time: "6:00 PM",  title: "Dinner",                             description: "Catered dinner. Refuel, recharge, and keep hacking!",                                                      type: "logistics",  duration: "45 min" },
+        { time: "8:00 PM",  title: "Office Hours with Advisory Board",   description: "Sign up at the advisor table for 1:1 sessions with our industry advisors.",                               type: "mentoring",  duration: "120 min" },
+        { time: "10:00 PM", title: "⏰ Hacking Ends — Submissions Due",  description: "All coding must stop. Submit your project via the registration form before this deadline.",              type: "event",      duration: "" },
       ],
     },
     {
-      day:    "Day 2",
-      date:   "September 3, 2026",
+      day:    "Day 2 — Presentations & Awards",
+      date:   "September 26, 2026",
       events: [
-        { time: "12:00 AM", title: "Midnight Check-in with Mentors",     description: "Optional drop-in session. Share your progress, get feedback, and stay on track.",                        type: "mentoring",  duration: "60 min" },
-        { time: "6:00 AM",  title: "Sunrise Breakfast",                  description: "Breakfast for the overnight hackers. You made it through the night!",                                    type: "logistics",  duration: "30 min" },
-        { time: "9:00 AM",  title: "Final Sprint",                       description: "One hour left! Polish your project, test your demo, and prepare your submission.",                       type: "hacking",    duration: "60 min" },
-        { time: "10:00 AM", title: "⏰ Hacking Ends",                    description: "All coding must stop. Commit your code and prepare your Devpost submission.",                            type: "event",      duration: "" },
-        { time: "10:30 AM", title: "📤 Devpost Submissions Due",         description: "Final deadline for Devpost submission. No exceptions.",                                                   type: "event",      duration: "" },
-        { time: "11:00 AM", title: "Demo Fair Begins",                   description: "All teams set up their projects at assigned tables. Judges will circulate and ask questions.",           type: "judging",    duration: "90 min" },
-        { time: "12:30 PM", title: "Lunch",                              description: "Catered lunch served during the demo fair.",                                                              type: "logistics",  duration: "45 min" },
-        { time: "1:00 PM",  title: "Judge Deliberation",                 description: "Judges score and deliberate on winners for all tracks.",                                                  type: "judging",    duration: "60 min" },
-        { time: "2:30 PM",  title: "🏆 Closing Ceremony",               description: "Winners announced! Prize distribution, sponsor recognition, and thank-you's.",                            type: "keynote",    duration: "60 min" },
-        { time: "3:30 PM",  title: "Networking & Wrap-Up",               description: "Celebrate your achievement! Connect with sponsors, judges, and fellow hackers.",                         type: "logistics",  duration: "60 min" },
-        { time: "4:30 PM",  title: "Event Ends",                         description: "Thanks for making HackSJSU amazing. See you next year!",                                                  type: "event",      duration: "" },
+        { time: "9:00 AM",  title: "Welcome & Keynote Address",          description: "Opening remarks from SJSU leadership and HP, followed by the keynote address.",                           type: "keynote",    duration: "60 min" },
+        { time: "10:00 AM", title: "Team Presentations Begin",           description: "Teams present their projects to judges and the audience. Each team gets a dedicated time slot.",           type: "judging",    duration: "" },
+        { time: "12:00 PM", title: "Lunch",                              description: "Catered lunch break during the presentation rounds.",                                                       type: "logistics",  duration: "45 min" },
+        { time: "1:00 PM",  title: "Presentations Continue",             description: "Second round of team presentations to the judging panel.",                                                 type: "judging",    duration: "" },
+        { time: "3:00 PM",  title: "Judge Deliberation",                 description: "Judges score and deliberate on winners.",                                                                   type: "judging",    duration: "60 min" },
+        { time: "4:00 PM",  title: "🏆 Award Ceremony",                 description: "Winners announced! Prize distribution, sponsor recognition, and thank-you's.",                              type: "keynote",    duration: "60 min" },
+        { time: "5:00 PM",  title: "Networking & Wrap-Up",               description: "Celebrate your achievement! Connect with sponsors, judges, and fellow hackers.",                           type: "logistics",  duration: "60 min" },
+        { time: "6:00 PM",  title: "Event Ends",                         description: "Thanks for making SJSUHack 2026 amazing. See you next year!",                                             type: "event",      duration: "" },
       ],
     },
   ],
@@ -445,44 +420,48 @@ const CONFIG = {
   // ─────────────────────────────────────────────
   faq: [
     {
-      question: "Who can participate in HackSJSU?",
-      answer:   "HackSJSU is open to all currently enrolled undergraduate and graduate students from any accredited university or college. Students from SJSU and other institutions are equally welcome.",
+      question: "Who can participate in SJSUHack?",
+      answer:   "SJSUHack is open exclusively to currently enrolled SJSU students — both undergraduate and graduate. You must have a valid SJSU student ID to register and participate.",
     },
     {
       question: "How large can my team be?",
-      answer:   "Teams can have 2 to 4 members. Solo participants may register but must join a team before hacking begins. We'll have a team formation session at the start of the event.",
+      answer:   "Teams must have 2 to 5 members. Solo participants may register but must join a team before hacking begins. We'll have a team formation session at the start of Day 1.",
     },
     {
       question: "Is it free to attend?",
-      answer:   "Yes — 100% free! HackSJSU provides meals, snacks, Wi-Fi, and all the resources and swag you need throughout the entire 24-hour event.",
+      answer:   "Yes — 100% free! SJSUHack provides meals, snacks, Wi-Fi, and all the resources and swag you need. Just bring your student ID and your ideas!",
     },
     {
       question: "Do I need to have prior coding experience?",
-      answer:   "Absolutely not! We welcome hackers of all experience levels. Beginners will find workshops, hands-on mentors, and starter kits to help them get up and running quickly.",
+      answer:   "Absolutely not! We welcome hackers of all experience levels. Beginners will find workshops, hands-on advisors, and guidance to help them get up and running quickly.",
     },
     {
       question: "What should I bring?",
-      answer:   "Bring your laptop, charger, student ID, any hardware you want to use, toiletries if you're staying overnight, and most importantly — your ideas and enthusiasm!",
+      answer:   "Bring your laptop, charger, student ID, and any hardware you want to use. Day 1 is the hackathon and Day 2 is presentations — plan accordingly!",
+    },
+    {
+      question: "How does the 2-day format work?",
+      answer:   "Day 1 (September 25) is the hackathon — teams build their projects from morning to 10 PM. Day 2 (September 26) is presentations and awards — teams present to judges, followed by the keynote address and award ceremony.",
     },
     {
       question: "Can I start building my project before the hackathon?",
-      answer:   "No — all core code must be written during the hackathon window. You may use open-source libraries, frameworks, public APIs, and datasets, but the project idea and implementation must originate at the event.",
+      answer:   "No — all core code must be written during Day 1's hacking window. You may use open-source libraries, frameworks, public APIs, and datasets, but the project idea and implementation must originate at the event.",
     },
     {
       question: "How will projects be judged?",
-      answer:   "Projects are judged on Innovation (25%), Technical Complexity (25%), Real-World Impact & Feasibility (25%), and Presentation & Demo Quality (25%). Track-specific rubrics may add additional criteria.",
+      answer:   "Projects are judged on Innovation (25%), Technical Complexity (25%), Real-World Impact & Feasibility (25%), and Presentation & Demo Quality (25%).",
     },
     {
       question: "Will there be hardware available to use?",
-      answer:   "HP will provide select hardware and equipment for participants, especially for the HP Open Innovation Challenge track. More details will be announced before the event.",
+      answer:   "HP will provide select hardware and equipment for participants. More details will be announced before the event.",
     },
     {
       question: "Is the event in-person?",
-      answer:   "Yes! HackSJSU is a fully in-person event held at the SJSU Event Center. We strongly encourage attending in person for the workshops, mentoring, and networking.",
+      answer:   "Yes! SJSUHack is a fully in-person event held at the SJSU ISB Building. Attendance in person is required for both days.",
     },
     {
       question: "How do I register?",
-      answer:   "Click the 'Register Now' button anywhere on this site and complete the Google Form. Spots are limited, so register as early as possible to secure your place.",
+      answer:   "Click the 'Register Now' button anywhere on this site and complete the Google Form. Spots are limited — register early!",
     },
     {
       question: "Will I get a certificate of participation?",
@@ -490,7 +469,7 @@ const CONFIG = {
     },
     {
       question: "I have more questions — who do I contact?",
-      answer:   "Reach out to us at hackathon@sjsu.edu or DM us on Instagram and Twitter. We're happy to help!",
+      answer:   "Reach out to us at hackathon@sjsu.edu or DM us on Instagram. We're happy to help!",
     },
   ],
 

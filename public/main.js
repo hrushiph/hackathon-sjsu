@@ -226,28 +226,22 @@ function renderMentors(containerId, limit = 999) {
 function renderSponsors(containerId) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  const tiers = ['platinum', 'gold', 'silver', 'bronze', 'community'];
-  const tierLabels = { platinum:'Platinum', gold:'Gold', silver:'Silver', bronze:'Bronze', community:'Community Partners' };
-  let html = '';
-  tiers.forEach(tier => {
-    const list = CONFIG.sponsors[tier];
-    if (!list || !list.length) return;
-    html += `<div class="sponsor-tier-label ${tier}">${tierLabels[tier]}</div>
-      <div class="sponsors-grid">
-        ${list.map(s => `
-          <a href="${s.url}" target="_blank" rel="noopener"
-             class="sponsor-card ${tier}" title="${s.name}${s.description ? ' — ' + s.description : ''}">
-            <div>
-              <img src="assets/sponsors/${s.imageFile}"
-                   alt="${s.name}"
-                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-                   style="max-height:${tier==='platinum'?80:tier==='gold'?60:45}px;object-fit:contain;">
-              <div class="sponsor-name" style="display:none">${s.name}</div>
-            </div>
-          </a>`).join('')}
-      </div>`;
-  });
-  el.innerHTML = html || '<p class="text-center" style="opacity:.5">Sponsors to be announced soon.</p>';
+  const list = Array.isArray(CONFIG.sponsors) ? CONFIG.sponsors : [];
+  if (!list.length) {
+    el.innerHTML = '<p class="text-center" style="opacity:.5">Sponsors to be announced soon.</p>';
+    return;
+  }
+  el.innerHTML = `<div class="sponsors-grid">
+    ${list.map(s => `
+      <a href="${s.url}" target="_blank" rel="noopener" class="sponsor-card" title="${s.name}${s.description ? ' — ' + s.description : ''}">
+        <div>
+          <img src="assets/sponsors/${s.imageFile}" alt="${s.name}"
+               style="max-height:80px;object-fit:contain;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="sponsor-name" style="display:none">${s.name}</div>
+        </div>
+      </a>`).join('')}
+  </div>`;
 }
 
 // ─── Challenges ────────────────────────────────────────────
@@ -498,16 +492,13 @@ function renderFeaturedChallenges(containerId, limit = 3) {
 function renderHomepageSponsors(containerId) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  const all = [
-    ...CONFIG.sponsors.platinum,
-    ...CONFIG.sponsors.gold,
-  ].slice(0, 8);
+  const list = (Array.isArray(CONFIG.sponsors) ? CONFIG.sponsors : []).slice(0, 8);
   el.innerHTML = `<div class="sponsors-grid">
-    ${all.map(s => `
+    ${list.map(s => `
       <a href="${s.url}" target="_blank" rel="noopener" class="sponsor-card" title="${s.name}">
         <div>
           <img src="assets/sponsors/${s.imageFile}" alt="${s.name}"
-               style="max-height:60px;object-fit:contain;"
+               style="max-height:70px;object-fit:contain;"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <div class="sponsor-name" style="display:none">${s.name}</div>
         </div>
