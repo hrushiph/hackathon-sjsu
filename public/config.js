@@ -193,10 +193,10 @@ const CONFIG = {
   advisoryPanel: [
     {
       name:      "Danny Steyer",
-      title:     "Advisory Board Member",
-      company:   "HackSJSU",
+      title:     "Program Specialist & Student Advisor",
+      company:   "San Jose State University",
       imageFile: "danny_steyer.jpg",
-      bio:       "Esteemed advisor and champion of student innovation at HackSJSU. Bringing deep expertise and strategic guidance to shape the hackathon's vision.",
+      bio:       "Program Specialist and Student Advisor in the Applied Data Science department at SJSU. A dedicated champion of student success and innovation in the data science community.",
       linkedin:  "#",
     },
     {
@@ -218,44 +218,18 @@ const CONFIG = {
     },
     {
       name:      "Jorge Rick Gosalvez",
-      title:     "Engineer",
-      company:   "HP AI Labs",
+      title:     "Principal AI Product Manager",
+      company:   "HP AI Studio",
       imageFile: "rick_gosalvez.jpg",
-      bio:       "AI researcher and engineer at HP AI Labs, bringing cutting-edge artificial intelligence research and enterprise technology expertise to advise our participants.",
+      bio:       "Head of Product for HP AI Studio at HP AI Labs. Leading product strategy for enterprise AI tooling and bringing cutting-edge AI capabilities to HP's developer ecosystem.",
       linkedin:  "#",
     },
   ],
 
-
-  // ─── ADVISORY BOARD / MENTORS ────────────────────────────
-  // These are the Advisory Board members from the GuestList sheet.
-  // Photos: public/assets/mentors/<imageFile>
-  mentors: [
-    {
-      name:      "Prof. Simon Sim",
-      title:     "Chair, Applied Data Science",
-      company:   "San Jose State University",
-      imageFile: "prof_simon_sim.jpg",     // ← Upload photo
-      expertise: "Applied Data Science & AI Education",
-      linkedin:  "#",
-    },
-    {
-      name:      "Himant Goyal",
-      title:     "Senior Product Manager",
-      company:   "Salesforce",
-      imageFile: "himant_goyal.jpg",       // ← Upload photo
-      expertise: "Product Strategy & AI",
-      linkedin:  "#",
-    },
-    {
-      name:      "Rick Gosalvez",
-      title:     "Advisory Board",
-      company:   "HP AI Labs",
-      imageFile: "rick_gosalvez.jpg",      // ← Upload photo
-      expertise: "AI Research & Enterprise Tech",
-      linkedin:  "#",
-    },
-  ],
+  // NOTE: The advisoryPanel[] array above is the single source of truth
+  // for advisory board members shown on the landing page AND mentors.html.
+  // The mentors[] key below is kept as an alias for backward compatibility.
+  mentors: [], // ← Intentionally empty — data lives in advisoryPanel[]
 
   // ─────────────────────────────────────────────
   // SPONSORS

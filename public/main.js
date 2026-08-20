@@ -199,8 +199,9 @@ function renderJudges(containerId, limit = 999) {
 function renderMentors(containerId, limit = 999) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  const mentors = CONFIG.mentors.slice(0, limit);
-  if (!mentors.length) { el.innerHTML = '<p class="text-center" style="opacity:.5">Mentors to be announced soon.</p>'; return; }
+  // Advisory panel is the single source of truth for the mentors page
+  const mentors = (CONFIG.advisoryPanel || CONFIG.mentors || []).slice(0, limit);
+  if (!mentors.length) { el.innerHTML = '<p class="text-center" style="opacity:.5">Advisory board to be announced soon.</p>'; return; }
   el.innerHTML = mentors.map(m => `
     <div class="person-card fade-in">
       <img class="person-card-img"
@@ -211,7 +212,8 @@ function renderMentors(containerId, limit = 999) {
         <div class="person-card-name">${m.name}</div>
         <div class="person-card-title">${m.title}</div>
         <div class="person-card-company">${m.company}</div>
-        ${m.expertise ? `<span class="person-card-tag">⚡ ${m.expertise}</span>` : ''}
+        ${m.tag ? `<span class="person-card-tag">⭐ ${m.tag}</span>` : ''}
+        ${m.bio ? `<div class="person-card-bio">${m.bio}</div>` : ''}
         <div class="person-card-links">
           ${m.linkedin && m.linkedin !== '#' ? `<a href="${m.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
         </div>
