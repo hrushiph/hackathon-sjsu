@@ -174,16 +174,8 @@ const CONFIG = {
       name:      "Hrushikesh Pokala",
       title:     "Senior Software Development Engineer",
       company:   "Equifax",
-      imageFile: "hrushikesh_pokala.jpg",   // ← Upload real photo
+      imageFile: "hrushikesh_pokala.jpg",
       bio:       "MSADI alumnus at SJSU and senior engineer at Equifax. Brings experience in financial data platforms and AI-driven insights at enterprise scale.",
-      linkedin:  "#",
-    },
-    {
-      name:      "Siddhartha Dixit",
-      title:     "Chief Technology Officer, SVP",
-      company:   "iTradeNetwork",
-      imageFile: "siddhartha_dixit.jpg",    // ← Upload real photo
-      bio:       "CTO and SVP at iTradeNetwork. Visionary tech executive with expertise in supply chain technology and AI. Willing to extend onsite interviews to students.",
       linkedin:  "#",
     },
   ],
