@@ -152,7 +152,7 @@ const CONFIG = {
       company: "Salesforce",
       imageFile: "rengarajan_margasahayam.jpg",  // ← Upload real photo
       bio: "Engineering leader at Salesforce driving large-scale software platform initiatives. Deep expertise in distributed systems and cloud-native engineering.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rengam/",
     },
     {
       name: "Rohith Iyengar",
@@ -160,7 +160,7 @@ const CONFIG = {
       company: "HP AI Labs",
       imageFile: "rohith_iyengar.jpg",      // ← Upload real photo
       bio: "SJSU Alumni and AI engineer at HP Labs working on cutting-edge AI and machine learning applications for enterprise and edge computing.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rohithiyengar/",
     },
     {
       name: "Hariharasubramanian C.S.",
@@ -168,7 +168,7 @@ const CONFIG = {
       company: "Zededa",
       imageFile: "hariharasubramanian_cs.jpg",  // ← Upload real photo
       bio: "Distinguished Engineer at Zededa, a Silicon Valley-based edge AI company. Expert in edge computing, distributed systems, and AI infrastructure.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/cshari/",
     },
     {
       name: "Hrushikesh Pokala",
@@ -176,7 +176,7 @@ const CONFIG = {
       company: "Equifax",
       imageFile: "hrushikesh_pokala.jpg",
       bio: "MSADI alumnus at SJSU and senior engineer at Equifax. Brings experience in financial data platforms and AI-driven insights at enterprise scale.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/hrushiph/",
     },
     {
       name: "Surbhi Gupta",
@@ -203,7 +203,7 @@ const CONFIG = {
       company: "San Jose State University",
       imageFile: "danny_steyer.jpg",
       bio: "Program Specialist and Student Advisor in the Applied Data Science department at SJSU. A dedicated champion of student success and innovation in the data science community.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/danny-steyer-b450b4106/",
     },
     {
       name: "Himant Goyal",
@@ -211,7 +211,7 @@ const CONFIG = {
       company: "Salesforce",
       imageFile: "himant_goyal.jpg",
       bio: "SJSU alumnus and Senior PM at Salesforce. Passionate about product strategy, AI-driven innovation, and nurturing the next generation of tech talent.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/himant-goyal-7a25b612/",
       tag: "SJSU Alumni",
     },
     {
@@ -220,7 +220,7 @@ const CONFIG = {
       company: "San Jose State University",
       imageFile: "prof_simon_sim.jpg",
       bio: "Chair of the Applied Data Science program at SJSU. Leading academic voice in data science education and applied AI research in Silicon Valley.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/simon-s-y-shim-8393b41/",
     },
     {
       name: "Jorge Rick Gosalvez",
@@ -228,7 +228,8 @@ const CONFIG = {
       company: "HP Inc.",
       imageFile: "rick_gosalvez.jpg",
       bio: "Head of Product for HP AI Studio at HP AI Labs. Leading product strategy for enterprise AI tooling and bringing cutting-edge AI capabilities to HP's developer ecosystem.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rickgosalvez/",
+      tag: "SJSU Alumni",
     },
   ],
 
