@@ -254,8 +254,6 @@ function renderChallenges(containerId, limit = 999) {
       ${c.special ? `<span class="challenge-badge-special">⭐ Sponsored by ${c.sponsor}</span>` : ''}
       <h3 class="challenge-title">${c.title}</h3>
       <p class="challenge-desc">${c.description}</p>
-      <div class="challenge-prize">${c.prize}</div>
-      <div class="challenge-prize-label">Track Prize</div>
       ${c.requirements?.length ? `
         <ul class="challenge-reqs">
           ${c.requirements.map(r => `<li>${r}</li>`).join('')}
