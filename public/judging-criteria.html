@@ -37,9 +37,16 @@
     .score-table td { padding:.85rem 1.1rem; border-bottom:1px solid var(--clr-border); color:var(--clr-text-muted); vertical-align:top; line-height:1.5; }
     .score-table tr:hover td { background:rgba(255,255,255,.02); }
     .score-table .criterion-name { font-weight:700; color:var(--clr-text); font-size:.92rem; }
-    .score-table .weight-pct { font-family:var(--font-heading); font-weight:800; font-size:1rem; background:var(--grad-cta); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .score-table .weight-pct { font-family:var(--font-heading); font-weight:800; font-size:1rem; color:#4da3ff; }
+    .score-table .key-q { font-size:.85rem; color:var(--clr-text-muted); font-style:italic; padding-left:1.25rem; border-left:2px solid rgba(0,85,162,.3); line-height:1.6; }
     .score-table .hp-row td { background:rgba(0,85,162,.07); }
     .score-table .hp-row .criterion-name { color:#4da3ff; }
+    .score-table .hp-row .key-q { border-left-color:rgba(77,163,255,.5); color:#a8c8f0; }
+    .score-table .total-row td { background:rgba(255,255,255,.03); border-top:2px solid var(--clr-border); }
+    .score-table .total-row .criterion-name { font-size:1rem; color:var(--clr-text); }
+    .score-table .total-row .weight-pct { font-size:1rem; color:#4da3ff; }
+    .score-table .total-row .total-weight { font-family:var(--font-heading); font-weight:800; font-size:1rem; color:#4da3ff; }
+    .score-table .total-row .key-q { border-left-color:rgba(229,168,35,.4); color:#E5A823; font-style:normal; font-weight:600; }
     .bonus-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1.5rem; }
     .bonus-card { background:var(--clr-card); border:1px solid var(--clr-border); border-radius:12px; padding:1.25rem; display:flex; gap:.85rem; align-items:flex-start; }
     .bonus-emoji { font-size:1.5rem; flex-shrink:0; }
@@ -214,17 +221,17 @@
           <tr><th>Criterion</th><th>Points</th><th>Weight</th><th>Key Question</th></tr>
         </thead>
         <tbody>
-          <tr class="hp-row"><td class="criterion-name">🖥️ HP Product Integration</td><td class="weight-pct">25</td><td>25%</td><td>How deeply and creatively is HP technology used?</td></tr>
-          <tr><td class="criterion-name">💡 Innovation &amp; Creativity</td><td class="weight-pct">20</td><td>20%</td><td>How original and surprising is the idea?</td></tr>
-          <tr><td class="criterion-name">⚙️ Technical Complexity</td><td class="weight-pct">20</td><td>20%</td><td>How sophisticated is the engineering?</td></tr>
-          <tr><td class="criterion-name">🌍 Real-World Impact</td><td class="weight-pct">20</td><td>20%</td><td>Does it solve a real problem at scale?</td></tr>
-          <tr><td class="criterion-name">🎤 Presentation &amp; Demo</td><td class="weight-pct">10</td><td>10%</td><td>Is the story clear and demo compelling?</td></tr>
-          <tr><td class="criterion-name">🎨 Design &amp; UX</td><td class="weight-pct">5</td><td>5%</td><td>Is the interface intuitive and polished?</td></tr>
-          <tr style="border-top:2px solid var(--clr-border)">
-            <td class="criterion-name" style="color:var(--clr-text)">Total</td>
-            <td class="weight-pct" style="font-size:1.3rem">100</td>
-            <td style="font-weight:700;color:var(--clr-text)">100%</td>
-            <td style="color:var(--clr-text-dim);font-style:italic">+ bonus points available</td>
+          <tr class="hp-row"><td class="criterion-name">🖥️ HP Product Integration</td><td class="weight-pct">25</td><td>25%</td><td class="key-q">How deeply and creatively is HP technology used?</td></tr>
+          <tr><td class="criterion-name">💡 Innovation &amp; Creativity</td><td class="weight-pct">20</td><td>20%</td><td class="key-q">How original and surprising is the idea?</td></tr>
+          <tr><td class="criterion-name">⚙️ Technical Complexity</td><td class="weight-pct">20</td><td>20%</td><td class="key-q">How sophisticated is the engineering?</td></tr>
+          <tr><td class="criterion-name">🌍 Real-World Impact</td><td class="weight-pct">20</td><td>20%</td><td class="key-q">Does it solve a real problem at scale?</td></tr>
+          <tr><td class="criterion-name">🎤 Presentation &amp; Demo</td><td class="weight-pct">10</td><td>10%</td><td class="key-q">Is the story clear and demo compelling?</td></tr>
+          <tr><td class="criterion-name">🎨 Design &amp; UX</td><td class="weight-pct">5</td><td>5%</td><td class="key-q">Is the interface intuitive and polished?</td></tr>
+          <tr class="total-row">
+            <td class="criterion-name">🏆 Total</td>
+            <td class="weight-pct">100</td>
+            <td class="total-weight">100%</td>
+            <td class="key-q">✨ Plus up to +10 bonus points</td>
           </tr>
         </tbody>
       </table>
