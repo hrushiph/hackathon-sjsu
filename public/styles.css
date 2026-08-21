@@ -1357,15 +1357,93 @@ textarea.form-input { resize: vertical; min-height: 130px; }
   .timeline-time { min-width: 60px; font-size: 0.75rem; }
   .about-partner-card { grid-template-columns: 1fr; }
   .hero-orb { display: none; }
+
+  /* ── Inline grids that don't use CSS classes ─────────── */
+  /* These are targeted via attribute selectors */
+  .section-header p { font-size: 1rem; }
+  .cta-section { padding: 2.5rem 1.5rem; }
+  .page-hero-content h1 { font-size: 2.2rem; }
+  .page-hero-content p  { font-size: 1rem; }
 }
+
+/* ── 600px: tablet-small / large phones ─────────────────── */
+@media (max-width: 600px) {
+  /* Nav */
+  .nav-logo { font-size: 1.1rem; }
+
+  /* Hero */
+  .hero-content { padding: 5rem 0 3rem; text-align: center; }
+  .hero-actions { justify-content: center; }
+  .hero-stats   { justify-content: center; }
+
+  /* About inline grid → stack */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Judges fixed 3-col → 2-col on medium phones */
+  [style*="repeat(3,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Score table: ensure it scrolls */
+  .score-table-wrap { -webkit-overflow-scrolling: touch; }
+
+  /* HP Banner flex → column */
+  .hp-banner { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+
+  /* Section tags */
+  .section-tag { font-size: 0.7rem; }
+
+  /* Countdown */
+  .countdown-unit { min-width: 56px; padding: 0.6rem; }
+  .countdown-number { font-size: 1.6rem; }
+}
+
 @media (max-width: 480px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+
   .countdown-number { font-size: 1.8rem; }
   .countdown-unit   { min-width: 64px; padding: 0.75rem; }
   .footer-inner { grid-template-columns: 1fr; }
+
+  /* All generic grids → single column */
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .prizes-podium { grid-template-columns: 1fr; }
+
+  /* All inline grids → single column */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="repeat(3,1fr)"],
+  [style*="repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Timeline */
   .timeline::before { display: none; }
   .timeline-time { display: none; }
+
+  /* Cards */
+  .challenge-card { padding: 1.5rem; }
+  .card { padding: 1.25rem; }
+  .judge-card { padding: 1.25rem; }
+
+  /* CTA */
+  .cta-actions { flex-direction: column; align-items: center; }
+  .btn { width: 100%; max-width: 280px; text-align: center; justify-content: center; }
+
+  /* Criteria page */
+  .criteria-card { padding: 1.5rem; }
+  .hp-banner { padding: 1.25rem; }
+  .process-step { padding: 1.25rem; }
+
+  /* Sponsor chips */
+  .hp-product-chip { font-size: 0.78rem; }
+
+  /* Section padding */
+  .section    { padding: 2.5rem 0; }
+  .section-sm { padding: 1.5rem 0; }
 }
