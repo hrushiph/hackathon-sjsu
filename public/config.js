@@ -178,6 +178,14 @@ const CONFIG = {
       bio:       "MSADI alumnus at SJSU and senior engineer at Equifax. Brings experience in financial data platforms and AI-driven insights at enterprise scale.",
       linkedin:  "#",
     },
+    {
+      name:      "Surbhi Gupta",
+      title:     "Senior Product Manager",
+      company:   "Technology Industry",
+      imageFile: "surbhi_gupta.jpg",
+      bio:       "Experienced product and technology leader with a track record of building impactful products. Passionate about fostering innovation and supporting the next generation of engineers.",
+      linkedin:  "https://www.linkedin.com/in/surbhi-gupta-34064017/",
+    },
   ],
 
   // ─────────────────────────────────────────────
