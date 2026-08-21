@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Judging Criteria — SJSUHack</title>
+  <meta name="description" content="SJSUHack judging criteria — how projects are evaluated, scoring rubric, and HP product integration requirements.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <style>
+    .criteria-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.75rem; margin-top:2.5rem; }
+    .criteria-card { background:var(--clr-card); border:1px solid var(--clr-border); border-radius:16px; padding:2rem; position:relative; transition:transform .25s,box-shadow .25s; }
+    .criteria-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,.35); }
+    .criteria-card.highlight { border-color:var(--clr-primary); box-shadow:0 0 0 1px var(--clr-primary),0 8px 32px rgba(0,85,162,.25); }
+    .criteria-card.highlight::before { content:"⭐ HP Featured"; position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--grad-cta); color:#fff; font-size:.72rem; font-weight:700; letter-spacing:.06em; padding:.35rem 1rem; border-radius:20px; white-space:nowrap; }
+    .criteria-icon { font-size:2.25rem; margin-bottom:.75rem; }
+    .criteria-weight { display:inline-block; font-family:var(--font-heading); font-size:2rem; font-weight:800; background:var(--grad-cta); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
+    .criteria-weight-label { font-size:.75rem; color:var(--clr-text-dim); text-transform:uppercase; letter-spacing:.08em; margin-top:.15rem; }
+    .criteria-title { font-family:var(--font-heading); font-size:1.2rem; font-weight:700; margin:.75rem 0 .5rem; color:var(--clr-text); }
+    .criteria-desc { font-size:.9rem; line-height:1.7; color:var(--clr-text-muted); }
+    .criteria-levels { margin-top:1.25rem; border-top:1px solid var(--clr-border); padding-top:1rem; }
+    .criteria-levels-title { font-size:.75rem; font-weight:700; color:var(--clr-text-dim); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+    .level-row { display:flex; align-items:flex-start; gap:.6rem; margin-bottom:.45rem; font-size:.82rem; line-height:1.5; }
+    .level-badge { flex-shrink:0; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.65rem; font-weight:800; color:#fff; }
+    .level-5{background:#0055A2;} .level-4{background:#3B7DD8;} .level-3{background:#E5A823;} .level-2{background:#888;} .level-1{background:#555;}
+    .level-text { color:var(--clr-text-muted); }
+    .hp-banner { background:linear-gradient(135deg,rgba(0,85,162,.15) 0%,rgba(0,85,162,.05) 100%); border:1px solid rgba(0,85,162,.4); border-radius:16px; padding:2rem 2.5rem; display:flex; align-items:flex-start; gap:1.5rem; margin:3rem 0; }
+    .hp-banner-icon { font-size:2.5rem; flex-shrink:0; }
+    .hp-banner h3 { font-family:var(--font-heading); font-size:1.2rem; margin-bottom:.5rem; color:var(--clr-text); }
+    .hp-products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1.25rem; }
+    .hp-product-chip { background:rgba(0,85,162,.12); border:1px solid rgba(0,85,162,.3); border-radius:10px; padding:.75rem 1rem; font-size:.85rem; display:flex; align-items:center; gap:.5rem; }
+    .hp-product-chip strong { color:var(--clr-text); font-weight:700; display:block; font-size:.82rem; }
+    .hp-product-chip span { color:var(--clr-text-dim); font-size:.75rem; }
+    .score-table-wrap { overflow-x:auto; margin-top:2rem; }
+    .score-table { width:100%; border-collapse:collapse; font-size:.88rem; min-width:640px; }
+    .score-table th { padding:.85rem 1.1rem; text-align:left; font-family:var(--font-heading); font-size:.78rem; text-transform:uppercase; letter-spacing:.07em; color:var(--clr-text-dim); border-bottom:2px solid var(--clr-border); white-space:nowrap; }
+    .score-table td { padding:.85rem 1.1rem; border-bottom:1px solid var(--clr-border); color:var(--clr-text-muted); vertical-align:top; line-height:1.5; }
+    .score-table tr:hover td { background:rgba(255,255,255,.02); }
+    .score-table .criterion-name { font-weight:700; color:var(--clr-text); font-size:.92rem; }
+    .score-table .weight-pct { font-family:var(--font-heading); font-weight:800; font-size:1rem; background:var(--grad-cta); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .score-table .hp-row td { background:rgba(0,85,162,.07); }
+    .score-table .hp-row .criterion-name { color:#4da3ff; }
+    .bonus-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1.5rem; }
+    .bonus-card { background:var(--clr-card); border:1px solid var(--clr-border); border-radius:12px; padding:1.25rem; display:flex; gap:.85rem; align-items:flex-start; }
+    .bonus-emoji { font-size:1.5rem; flex-shrink:0; }
+    .bonus-card h4 { font-family:var(--font-heading); font-size:.95rem; font-weight:700; margin-bottom:.3rem; color:var(--clr-text); }
+    .bonus-card p { font-size:.82rem; color:var(--clr-text-muted); line-height:1.5; }
+    .bonus-pts { display:inline-block; background:rgba(229,168,35,.15); border:1px solid rgba(229,168,35,.4); color:#E5A823; font-size:.72rem; font-weight:700; padding:.15rem .55rem; border-radius:20px; margin-top:.4rem; }
+    .process-steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.25rem; margin-top:2rem; counter-reset:steps; }
+    .process-step { background:var(--clr-card); border:1px solid var(--clr-border); border-radius:12px; padding:1.5rem; text-align:center; counter-increment:steps; position:relative; }
+    .process-step::before { content:counter(steps); display:flex; align-items:center; justify-content:center; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--grad-cta); color:#fff; font-family:var(--font-heading); font-weight:800; font-size:.95rem; margin:0 auto .85rem; }
+    .process-step h4 { font-family:var(--font-heading); font-size:.95rem; font-weight:700; margin-bottom:.4rem; color:var(--clr-text); }
+    .process-step p { font-size:.82rem; color:var(--clr-text-muted); line-height:1.5; }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Evaluation Rubric</span>
+    <h1>Judging <span class="gradient-text">Criteria</span></h1>
+    <p>How your project is evaluated at SJSUHack. HP product integration is a core criterion — projects that meaningfully leverage HP technology will earn a significant scoring advantage.</p>
+  </div>
+</section>
+
+<!-- HP Products Banner -->
+<section class="section-sm">
+  <div class="container">
+    <div class="hp-banner">
+      <div class="hp-banner-icon">🖥️</div>
+      <div>
+        <h3>HP Products Available to Use at SJSUHack</h3>
+        <p style="font-size:.9rem;color:var(--clr-text-muted);line-height:1.7">
+          HP is co-hosting SJSUHack and provides direct access to HP developer tools at the event.
+          Projects that integrate HP technology score higher on the <strong style="color:var(--clr-text)">HP Product Integration</strong> criterion — worth 25% of the total score.
+        </p>
+        <div class="hp-products-grid">
+          <div class="hp-product-chip"><span style="font-size:1.25rem">🤖</span><div><strong>HP AI Studio</strong><span>Enterprise AI development platform</span></div></div>
+          <div class="hp-product-chip"><span style="font-size:1.25rem">💻</span><div><strong>HP Developer APIs</strong><span>HP hardware &amp; software APIs</span></div></div>
+          <div class="hp-product-chip"><span style="font-size:1.25rem">🖨️</span><div><strong>HP Hardware</strong><span>Devices provided on-site for demos</span></div></div>
+          <div class="hp-product-chip"><span style="font-size:1.25rem">☁️</span><div><strong>HP Cloud Services</strong><span>Credits &amp; sandbox access at event</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Criteria Cards -->
+<section class="section" id="criteria">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Scoring Rubric</span>
+      <h2>Judging <span class="gradient-text">Categories</span></h2>
+      <p>Each project is scored across 6 criteria totaling <strong>100 points</strong>. HP Product Integration carries the highest single weight.</p>
+    </div>
+    <div class="criteria-grid">
+
+      <!-- 1. HP Integration 25% -->
+      <div class="criteria-card highlight fade-in">
+        <div class="criteria-icon">🖥️</div>
+        <div class="criteria-weight">25</div>
+        <div class="criteria-weight-label">points · HP Integration</div>
+        <div class="criteria-title">HP Product Integration</div>
+        <div class="criteria-desc">Does the project meaningfully use HP technology — such as HP AI Studio, HP hardware, HP Developer APIs, or HP Cloud Services? Integration should be core to the solution, not superficial.</div>
+        <div class="criteria-levels">
+          <div class="criteria-levels-title">Scoring Levels</div>
+          <div class="level-row"><div class="level-badge level-5">5</div><div class="level-text"><strong>Exemplary (23–25 pts):</strong> HP product is central to the architecture. Deep integration that couldn't work without it.</div></div>
+          <div class="level-row"><div class="level-badge level-4">4</div><div class="level-text"><strong>Strong (18–22 pts):</strong> HP product meaningfully enhances the solution. Clear value-add beyond a surface-level API call.</div></div>
+          <div class="level-row"><div class="level-badge level-3">3</div><div class="level-text"><strong>Moderate (12–17 pts):</strong> HP product is used but could be swapped for a generic alternative without changing the core solution.</div></div>
+          <div class="level-row"><div class="level-badge level-2">2</div><div class="level-text"><strong>Minimal (6–11 pts):</strong> HP product mentioned or used superficially. Not integral to the project.</div></div>
+          <div class="level-row"><div class="level-badge level-1">1</div><div class="level-text"><strong>None (0–5 pts):</strong> No HP product used. Project may still score well in other categories.</div></div>
+        </div>
+      </div>
+
+      <!-- 2. Innovation 20% -->
+      <div class="criteria-card fade-in">
+        <div class="criteria-icon">💡</div>
+        <div class="criteria-weight">20</div>
+        <div class="criteria-weight-label">points · Innovation</div>
+        <div class="criteria-title">Innovation &amp; Creativity</div>
+        <div class="criteria-desc">How original and creative is the idea? Does it approach a problem in a new way, combine technologies unexpectedly, or solve something previously unsolved?</div>
+        <div class="criteria-levels">
+          <div class="criteria-levels-title">Scoring Levels</div>
+          <div class="level-row"><div class="level-badge level-5">5</div><div class="level-text"><strong>Exemplary (18–20 pts):</strong> Highly novel idea. Judges are surprised. Strong "why hasn't anyone done this before?" reaction.</div></div>
+          <div class="level-row"><div class="level-badge level-4">4</div><div class="level-text"><strong>Strong (14–17 pts):</strong> Creative twist on an existing concept. Clear originality in approach or implementation.</div></div>
+          <div class="level-row"><div class="level-badge level-3">3</div><div class="level-text"><strong>Moderate (9–13 pts):</strong> Solid idea with some creative elements. Common problem space but competent execution.</div></div>
+          <div class="level-row"><div class="level-badge level-2">2</div><div class="level-text"><strong>Minimal (5–8 pts):</strong> Familiar or derivative idea. Limited originality observed.</div></div>
+          <div class="level-row"><div class="level-badge level-1">1</div><div class="level-text"><strong>Poor (0–4 pts):</strong> Generic or copied concept. No apparent original contribution.</div></div>
+        </div>
+      </div>
+
+      <!-- 3. Technical 20% -->
+      <div class="criteria-card fade-in">
+        <div class="criteria-icon">⚙️</div>
+        <div class="criteria-weight">20</div>
+        <div class="criteria-weight-label">points · Technical</div>
+        <div class="criteria-title">Technical Complexity</div>
+        <div class="criteria-desc">How technically sophisticated is the implementation? Does it demonstrate strong engineering, thoughtful architecture, and effective use of AI/ML, APIs, or hardware within the hackathon timeframe?</div>
+        <div class="criteria-levels">
+          <div class="criteria-levels-title">Scoring Levels</div>
+          <div class="level-row"><div class="level-badge level-5">5</div><div class="level-text"><strong>Exemplary (18–20 pts):</strong> Impressive technical depth. Non-trivial engineering, smart system design, polished multi-component integration.</div></div>
+          <div class="level-row"><div class="level-badge level-4">4</div><div class="level-text"><strong>Strong (14–17 pts):</strong> Solid technical execution. Real engineering challenges solved. Not tutorial-level work.</div></div>
+          <div class="level-row"><div class="level-badge level-3">3</div><div class="level-text"><strong>Moderate (9–13 pts):</strong> Working implementation. Some shortcuts but functional end-to-end.</div></div>
+          <div class="level-row"><div class="level-badge level-2">2</div><div class="level-text"><strong>Minimal (5–8 pts):</strong> Mostly no-code or low-code. Limited engineering depth.</div></div>
+          <div class="level-row"><div class="level-badge level-1">1</div><div class="level-text"><strong>Poor (0–4 pts):</strong> Prototype barely works or incomplete. Very limited technical implementation.</div></div>
+        </div>
+      </div>
+
+      <!-- 4. Impact 20% -->
+      <div class="criteria-card fade-in">
+        <div class="criteria-icon">🌍</div>
+        <div class="criteria-weight">20</div>
+        <div class="criteria-weight-label">points · Impact</div>
+        <div class="criteria-title">Real-World Impact &amp; Feasibility</div>
+        <div class="criteria-desc">Does the project solve a meaningful real-world problem? Is the solution practically deployable? How large and underserved is the target audience?</div>
+        <div class="criteria-levels">
+          <div class="criteria-levels-title">Scoring Levels</div>
+          <div class="level-row"><div class="level-badge level-5">5</div><div class="level-text"><strong>Exemplary (18–20 pts):</strong> Clear, large-scale real-world problem. Solution is deployable today. Compelling market or social case.</div></div>
+          <div class="level-row"><div class="level-badge level-4">4</div><div class="level-text"><strong>Strong (14–17 pts):</strong> Genuine problem addressed. Path to real-world use is believable with moderate additional work.</div></div>
+          <div class="level-row"><div class="level-badge level-3">3</div><div class="level-text"><strong>Moderate (9–13 pts):</strong> Valid problem but solution has feasibility questions. Niche or unclear deployment path.</div></div>
+          <div class="level-row"><div class="level-badge level-2">2</div><div class="level-text"><strong>Minimal (5–8 pts):</strong> Problem not clearly articulated or solution unlikely to scale beyond demo.</div></div>
+          <div class="level-row"><div class="level-badge level-1">1</div><div class="level-text"><strong>Poor (0–4 pts):</strong> Toy problem or solution with no realistic real-world path.</div></div>
+        </div>
+      </div>
+
+      <!-- 5. Presentation 10% -->
+      <div class="criteria-card fade-in">
+        <div class="criteria-icon">🎤</div>
+        <div class="criteria-weight">10</div>
+        <div class="criteria-weight-label">points · Presentation</div>
+        <div class="criteria-title">Presentation &amp; Demo Quality</div>
+        <div class="criteria-desc">How well does the team communicate their project? Is the demo live and compelling? Can they clearly explain the problem, solution, tech stack, and HP integration?</div>
+        <div class="criteria-levels">
+          <div class="criteria-levels-title">Scoring Levels</div>
+          <div class="level-row"><div class="level-badge level-5">5</div><div class="level-text"><strong>Exemplary (9–10 pts):</strong> Polished, confident, clear. Live demo works flawlessly. Handles Q&amp;A with depth.</div></div>
+          <div class="level-row"><div class="level-badge level-4">4</div><div class="level-text"><strong>Strong (7–8 pts):</strong> Clear and confident. Demo works. Good storytelling with minor gaps.</div></div>
+          <div class="level-row"><div class="level-badge level-3">3</div><div class="level-text"><strong>Moderate (5–6 pts):</strong> Understandable but lacks polish. Demo partially works or uses screenshots.</div></div>
+          <div class="level-row"><div class="level-badge level-1">1</div><div class="level-text"><strong>Developing (0–4 pts):</strong> Unclear pitch. Demo broken or absent. Team struggled to explain the project.</div></div>
+        </div>
+      </div>
+
+      <!-- 6. Design 5% -->
+      <div class="criteria-card fade-in">
+        <div class="criteria-icon">🎨</div>
+        <div class="criteria-weight">5</div>
+        <div class="criteria-weight-label">points · Design</div>
+        <div class="criteria-title">Design &amp; User Experience</div>
+        <div class="criteria-desc">Is the user interface intuitive, accessible, and visually polished? Does the design enhance usability? Applies to any user-facing component of the project.</div>
+        <div class="criteria-levels">
+          <div class="criteria-levels-title">Scoring Levels</div>
+          <div class="level-row"><div class="level-badge level-5">5</div><div class="level-text"><strong>Exemplary (5 pts):</strong> Intuitive, polished, and delightful. Clearly designed from the user's perspective.</div></div>
+          <div class="level-row"><div class="level-badge level-3">3</div><div class="level-text"><strong>Adequate (3 pts):</strong> Functional interface. Usable but basic. Design is an afterthought.</div></div>
+          <div class="level-row"><div class="level-badge level-1">1</div><div class="level-text"><strong>Minimal (0–2 pts):</strong> Rough or confusing interface. No apparent design consideration.</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Scoring Summary Table -->
+<section class="section-sm" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">At a Glance</span>
+      <h2>Scoring <span class="gradient-text">Summary</span></h2>
+    </div>
+    <div class="score-table-wrap">
+      <table class="score-table">
+        <thead>
+          <tr><th>Criterion</th><th>Points</th><th>Weight</th><th>Key Question</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hp-row"><td class="criterion-name">🖥️ HP Product Integration</td><td class="weight-pct">25</td><td>25%</td><td>How deeply and creatively is HP technology used?</td></tr>
+          <tr><td class="criterion-name">💡 Innovation &amp; Creativity</td><td class="weight-pct">20</td><td>20%</td><td>How original and surprising is the idea?</td></tr>
+          <tr><td class="criterion-name">⚙️ Technical Complexity</td><td class="weight-pct">20</td><td>20%</td><td>How sophisticated is the engineering?</td></tr>
+          <tr><td class="criterion-name">🌍 Real-World Impact</td><td class="weight-pct">20</td><td>20%</td><td>Does it solve a real problem at scale?</td></tr>
+          <tr><td class="criterion-name">🎤 Presentation &amp; Demo</td><td class="weight-pct">10</td><td>10%</td><td>Is the story clear and demo compelling?</td></tr>
+          <tr><td class="criterion-name">🎨 Design &amp; UX</td><td class="weight-pct">5</td><td>5%</td><td>Is the interface intuitive and polished?</td></tr>
+          <tr style="border-top:2px solid var(--clr-border)">
+            <td class="criterion-name" style="color:var(--clr-text)">Total</td>
+            <td class="weight-pct" style="font-size:1.3rem">100</td>
+            <td style="font-weight:700;color:var(--clr-text)">100%</td>
+            <td style="color:var(--clr-text-dim);font-style:italic">+ bonus points available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Bonus Points -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Extra Credit</span>
+      <h2>Bonus <span class="gradient-text">Points</span></h2>
+      <p>Up to 10 additional bonus points awarded at judges' discretion. Bonus points can push your total score above 100.</p>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card fade-in"><div class="bonus-emoji">🖥️</div><div><h4>HP Hardware Demo</h4><p>Project runs live on HP hardware at the event — laptop, workstation, printer, or edge device.</p><span class="bonus-pts">+5 pts</span></div></div>
+      <div class="bonus-card fade-in"><div class="bonus-emoji">♿</div><div><h4>Accessibility</h4><p>Project demonstrably improves access for users with disabilities. Screen reader, color contrast, keyboard nav.</p><span class="bonus-pts">+3 pts</span></div></div>
+      <div class="bonus-card fade-in"><div class="bonus-emoji">🌱</div><div><h4>Sustainability Impact</h4><p>Addresses environmental sustainability — energy efficiency, carbon reduction, or circular economy.</p><span class="bonus-pts">+3 pts</span></div></div>
+      <div class="bonus-card fade-in"><div class="bonus-emoji">🎓</div><div><h4>First-Time Hackers</h4><p>Best project where all team members are first-time hackathon participants.</p><span class="bonus-pts">+5 pts</span></div></div>
+      <div class="bonus-card fade-in"><div class="bonus-emoji">🤝</div><div><h4>Open Source Commitment</h4><p>Team commits to open-sourcing the project within 30 days and shares the repo at demo time.</p><span class="bonus-pts">+2 pts</span></div></div>
+      <div class="bonus-card fade-in"><div class="bonus-emoji">📊</div><div><h4>Data-Driven Impact</h4><p>Project includes measurable metrics and real data to demonstrate its effectiveness.</p><span class="bonus-pts">+2 pts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Judging Process -->
+<section class="section-sm" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">How It Works</span>
+      <h2>The Judging <span class="gradient-text">Process</span></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-in"><h4>Submit Your Project</h4><p>Coding stops at 10 PM on Day 1 (Sept 25). Submit via the registration form before the deadline.</p></div>
+      <div class="process-step fade-in"><h4>Prepare Your Demo</h4><p>Day 2 morning (Sept 26): Set up, prepare your 5-minute pitch, and test your HP integration demo live.</p></div>
+      <div class="process-step fade-in"><h4>Present to Judges</h4><p>Each team presents to a rotating panel. Explain your HP product usage, problem, solution, and tech stack.</p></div>
+      <div class="process-step fade-in"><h4>Q&amp;A Round</h4><p>Judges ask questions — especially around why you chose specific HP tools and how they benefit the solution.</p></div>
+      <div class="process-step fade-in"><h4>Deliberation</h4><p>Judges independently score each project across all 6 criteria. Scores are averaged across the panel.</p></div>
+      <div class="process-step fade-in"><h4>Winners Announced</h4><p>🏆 Award ceremony at 4 PM on Sept 26. Winners across all categories will be recognized.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tips CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-section">
+      <h2>💡 Tips for <span class="gradient-text">Winning</span></h2>
+      <p style="max-width:600px;margin:0 auto 2rem">HP Product Integration is your biggest single opportunity — worth 25 points. Visit the HP booth at the start of Day 1 to learn what APIs and hardware are available, and architect your project around HP tools from the beginning.</p>
+      <div class="cta-actions">
+        <a href="judges.html" class="btn btn-gold">Meet the Judges &rarr;</a>
+        <a href="challenges.html" class="btn btn-outline">View Challenges</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => { initFadeIn(); });
+</script>
+</body>
+</html>
