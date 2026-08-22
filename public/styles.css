@@ -586,10 +586,12 @@ p  { color: var(--clr-text-muted); }
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.6rem;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .challenge-card::after {
   content: '';
@@ -604,14 +606,15 @@ p  { color: var(--clr-text-muted); }
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   border-color: var(--challenge-color, var(--clr-primary));
 }
-.challenge-emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+.challenge-emoji { font-size: 2.25rem; margin-bottom: .75rem; display: block; }
 .challenge-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
-.challenge-desc { font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; }
+.challenge-desc { font-size: 0.83rem; line-height: 1.6; color: var(--clr-text-muted); margin-bottom: 1rem; flex: 1; }
 .challenge-prize {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -636,13 +639,14 @@ p  { color: var(--clr-text-muted); }
   border-radius: var(--radius-full);
   margin-bottom: 0.75rem;
 }
-.challenge-reqs { margin: 1rem 0; }
+.challenge-reqs { margin: .75rem 0; }
 .challenge-reqs li {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--clr-text-muted);
-  padding: 0.3rem 0;
+  padding: 0.2rem 0;
   padding-left: 1.25rem;
   position: relative;
+  line-height: 1.5;
 }
 .challenge-reqs li::before {
   content: '✓';
@@ -665,6 +669,19 @@ p  { color: var(--clr-text-muted); }
   border: 1px solid var(--clr-border);
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
+}
+
+/* ── Challenge grid ────────────────────────────────── */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 960px) {
+  .challenges-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .challenges-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Schedule Timeline ────────────────────────────────────── */
