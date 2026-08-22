@@ -410,8 +410,8 @@ const CONFIG = {
         { time: "5:30 PM", title: "Intro & Welcome", description: "Welcome remarks from the organizing team. Overview of SJSUHack, the vision behind local agentic AI, and what to expect over the coming days.", type: "event", duration: "20 min" },
         { time: "5:50 PM", title: "Rubric & Judging Criteria", description: "Walk-through of the judging rubric — HP product integration, innovation, technical complexity, impact, and presentation. Q&A with judges panel.", type: "event", duration: "20 min" },
         { time: "6:10 PM", title: "Challenge Tracks Overview", description: "Deep-dive into all six challenge tracks. Understand the scope, requirements, and tools available for each category.", type: "event", duration: "25 min" },
-        { time: "6:35 PM", title: "Shared GPU Cluster Access", description: "Technical onboarding — connect to the shared GPU compute cluster, verify your access, and run your first local model. Support team on hand to help.", type: "workshop", duration: "30 min" },
-        { time: "7:05 PM", title: "Team Formation & Networking", description: "Find your team! Solo participants connect with potential teammates. Mentors and advisors available for initial project ideation.", type: "logistics", duration: "" },
+        { time: "6:35 PM", title: "Team Formation & Networking", description: "Find your team! Solo participants connect with potential teammates. Mentors and advisors available for initial project ideation.", type: "logistics", duration: "" },
+        
       ],
     },
     {
