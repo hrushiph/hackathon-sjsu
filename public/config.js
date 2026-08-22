@@ -198,14 +198,6 @@ const CONFIG = {
   // These appear on the landing page as a grid, same style as judges.
   advisoryPanel: [
     {
-      name: "Danny Steyer",
-      title: "Program Specialist & Student Advisor",
-      company: "San Jose State University",
-      imageFile: "danny_steyer.jpg",
-      bio: "Program Specialist and Student Advisor in the Applied Data Science department at SJSU. A dedicated champion of student success and innovation in the data science community.",
-      linkedin: "https://www.linkedin.com/in/danny-steyer-b450b4106/",
-    },
-    {
       name: "Himant Goyal",
       title: "Sr. Product Manager",
       company: "Salesforce",
@@ -231,6 +223,14 @@ const CONFIG = {
       linkedin: "https://www.linkedin.com/in/rickgosalvez/",
       tag: "SJSU Alumni",
     },
+    {
+      name: "Danny Steyer",
+      title: "Program Specialist & Student Advisor",
+      company: "San Jose State University",
+      imageFile: "danny_steyer.jpg",
+      bio: "Program Specialist and Student Advisor in the Applied Data Science department at SJSU. A dedicated champion of student success and innovation in the data science community.",
+      linkedin: "https://www.linkedin.com/in/danny-steyer-b450b4106/",
+    }
   ],
 
   // NOTE: advisoryPanel[] is the single source of truth for advisory/mentors pages.
@@ -412,7 +412,7 @@ const CONFIG = {
         { time: "6:10 PM", title: "Challenge Tracks Overview", description: "Deep-dive into all six challenge tracks. Understand the scope, requirements, and tools available for each category.", type: "event", duration: "25 min" },
         { time: "6:35 PM", title: "Team Formation & Networking", description: "Find your team! Solo participants connect with potential teammates. Mentors and advisors available for initial project ideation.", type: "logistics", duration: "" },
         { time: "7:05 PM", title: "Shared GPU Cluster Access", description: "Technical onboarding — connect to the shared GPU compute cluster, verify your access, and run your first local model. Support team on hand to help.", type: "workshop", duration: "30 min" },
-        
+
       ],
     },
     {
