@@ -58,10 +58,10 @@ const CONFIG = {
     // Dates (ISO format for countdown timer; displayDate for human-readable)
     // Day 1 (Sept 25): Hackathon — teams hack all day
     // Day 2 (Sept 26): Keynote, presentations & awards
-    date: "2026-09-25T08:00:00",   // Event start (used by countdown)
+    date: "2026-09-21T17:30:00",   // Event start (used by countdown)
     endDate: "2026-09-26T17:00:00",   // Event end
-    displayDate: "September 25, 2026",
-    displayDateRange: "September 25–26, 2026",
+    displayDate: "September 21, 2026",
+    displayDateRange: "September 21–26, 2026",
 
     location: "SJSU ISB Building",
     locationFull: "ISB Building, San Jose State University, San Jose, CA 95192",
@@ -458,8 +458,8 @@ const CONFIG = {
       answer: "Bring your laptop, charger, student ID, and any hardware you want to use. Day 1 is the hackathon and Day 2 is presentations — plan accordingly!",
     },
     {
-      question: "How does the 2-day format work?",
-      answer: "Day 1 (September 25) is the hackathon — teams build their projects from morning to 10 PM. Day 2 (September 26) is presentations and awards — teams present to judges, followed by the keynote address and award ceremony.",
+      question: "How does the format work?",
+      answer: "Kickoff is on September 21 with team formation and cluster setup. Day 1 (September 25) is the hackathon — teams build their projects from morning until the 8:00 PM submission deadline. Day 2 (September 26) is presentations and awards — teams present in morning rooms, followed by final presentations and awards in the afternoon.",
     },
     {
       question: "Can I start building my project before the hackathon?",
@@ -475,7 +475,7 @@ const CONFIG = {
     },
     {
       question: "Is the event in-person?",
-      answer: "Yes! SJSUHack is a fully in-person event held at the SJSU ISB Building. Attendance in person is required for both days.",
+      answer: "Yes! SJSUHack is a fully in-person event held at the SJSU ISB Building. Attendance in person is required for all sessions.",
     },
     {
       question: "How do I register?",
@@ -487,7 +487,7 @@ const CONFIG = {
     },
     {
       question: "What do I need to submit?",
-      answer: "Every team must submit three deliverables before the Sept 26 hacking deadline: (1) a public Git repository (GitHub/GitLab) with source code and a README, (2) a Slide Deck (PDF or Google Slides link) covering your problem, solution, and architecture, and (3) a 2-minute max demo video (YouTube, Drive, or Loom) showing your project in action. All three are required.",
+      answer: "Every team must submit three deliverables before the Sept 25 hacking deadline: (1) a public Git repository (GitHub/GitLab) with source code and a README, (2) a Slide Deck (PDF or Google Slides link) covering your problem, solution, and architecture, and (3) a 2-minute max demo video (YouTube, Drive, or Loom) showing your project in action. All three are required.",
     },
     {
       question: "I have more questions — who do I contact?",
