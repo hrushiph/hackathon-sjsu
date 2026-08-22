@@ -244,7 +244,7 @@ const CONFIG = {
     {
       name: "San Jose State University",
       imageFile: "sjsu.png",
-      url: "https://www.sjsu.edu",
+      url: "https://www.sjsu.edu/",
       description: "Co-host and primary academic partner",
     },
     {
