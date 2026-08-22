@@ -292,7 +292,7 @@ const CONFIG = {
       title: "Generative AI & Creative Tech",
       emoji: "🎨",
       color: "#7B2FBE",
-      description: "Explore the creative frontier of generative AI — text, images, audio, and multimodal experiences — running entirely on local hardware or the event's shared GPU cluster. No cloud dependency. Just raw compute and creativity.",
+      description: "Explore the creative frontier of generative AI — text, images, audio, and multimodal experiences — with your AI models running on local hardware or the event's shared GPU cluster. No cloud AI inference. Just raw GPU compute and creativity.",
       requirements: [
         "Generative model must run locally or on the shared cluster",
         "Novel creative application — art, music, storytelling, or interactive experience",
@@ -309,10 +309,9 @@ const CONFIG = {
       color: "#E5A823",
       description: "Build tools that amplify human productivity using AI — smart assistants, workflow automation, knowledge management, or intelligent collaboration. All inference runs locally or on the shared GPU cluster, ensuring speed, privacy, and offline capability.",
       requirements: [
-        "AI inference must be local or on the event's shared cluster",
+        "AI inference must not depend on cloud AI APIs — run on your device or the shared cluster",
         "Clear productivity use case with measurable user benefit",
         "Working prototype with a real-world workflow demo",
-        "Must function without internet connectivity to AI APIs",
       ],
       tools: ["LangChain (local models)", "Ollama", "LlamaIndex", "Chroma DB", "n8n + local LLM"],
       prize: "$3,000",
@@ -337,7 +336,7 @@ const CONFIG = {
       title: "Local Agentic Systems",
       emoji: "🤖",
       color: "#0096D6",
-      description: "Build autonomous AI agents that reason, plan, and act — without phoning home to the cloud. Use the shared GPU cluster to run multi-step agent pipelines that browse, code, summarize, and coordinate tasks entirely on local infrastructure.",
+      description: "Build autonomous AI agents that reason, plan, and act — without relying on cloud AI APIs. Use the shared GPU cluster to run multi-step agent pipelines that browse, code, summarize, and coordinate tasks entirely on local infrastructure.",
       requirements: [
         "Agent must run fully on local hardware or the shared GPU cluster",
         "Multi-step reasoning or tool-use required (not just single-turn chat)",
