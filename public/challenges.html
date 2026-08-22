@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Challenges — HackSJSU</title>
-  <meta name="description" content="Explore HackSJSU's AI-focused hackathon tracks. Choose your challenge and compete for prizes in AI for Social Good, Generative AI, Productivity, Ethics, and HP's special track.">
+  <title>Challenges — SJSUHack</title>
+  <meta name="description" content="Explore SJSUHack's six AI-focused hackathon tracks — all built on fully local or hybrid systems. Compete on a shared GPU cluster with tracks in Generative AI, Agentic Systems, Secure AI, Productivity, Ethics, and Community Impact.">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
 </head>
@@ -15,16 +15,36 @@
   <div class="page-hero-bg"></div>
   <div class="page-hero-grid"></div>
   <div class="container page-hero-content">
-    <span class="section-tag">Tracks & Themes</span>
+    <span class="section-tag">6 Tracks · Local & Hybrid AI</span>
     <h1>Hackathon <span class="gradient-text">Challenges</span></h1>
-    <p>Five AI-focused tracks with dedicated prize pools. Pick the one that excites you most — or innovate across multiple tracks.</p>
+    <p>Six AI-focused tracks — all running on fully local or hybrid systems. Connect to our shared GPU cluster and build without cloud API limits.</p>
+  </div>
+</section>
+
+<!-- Shared GPU Cluster Banner -->
+<section class="section-sm">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,rgba(0,85,162,.15) 0%,rgba(0,150,214,.1) 100%);border:1px solid rgba(0,150,214,.35);border-radius:16px;padding:2rem 2.5rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap">
+      <div style="font-size:3rem;flex-shrink:0">🖥️</div>
+      <div style="flex:1;min-width:260px">
+        <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:800;margin-bottom:.5rem;color:var(--clr-text)">Shared GPU Cluster — Available to All Teams</h3>
+        <p style="color:var(--clr-text-muted);font-size:.9rem;line-height:1.7;margin-bottom:.75rem">At SJSUHack, all teams connect to a <strong style="color:var(--clr-text)">shared GPU compute cluster</strong> on-site. Run large language models, image generators, and AI agents fully locally — no cloud API keys required. All tracks are designed for <strong style="color:var(--clr-text)">fully local or hybrid inference</strong>.</p>
+        <div style="display:flex;gap:.65rem;flex-wrap:wrap">
+          <span style="background:rgba(0,150,214,.15);border:1px solid rgba(0,150,214,.3);color:#4da3ff;font-size:.75rem;font-weight:600;padding:.25rem .75rem;border-radius:20px">🤖 Local LLMs</span>
+          <span style="background:rgba(0,150,214,.15);border:1px solid rgba(0,150,214,.3);color:#4da3ff;font-size:.75rem;font-weight:600;padding:.25rem .75rem;border-radius:20px">🎨 Image Generation</span>
+          <span style="background:rgba(0,150,214,.15);border:1px solid rgba(0,150,214,.3);color:#4da3ff;font-size:.75rem;font-weight:600;padding:.25rem .75rem;border-radius:20px">🔐 Private Inference</span>
+          <span style="background:rgba(0,150,214,.15);border:1px solid rgba(0,150,214,.3);color:#4da3ff;font-size:.75rem;font-weight:600;padding:.25rem .75rem;border-radius:20px">⚡ Shared GPU Pool</span>
+          <span style="background:rgba(0,150,214,.15);border:1px solid rgba(0,150,214,.3);color:#4da3ff;font-size:.75rem;font-weight:600;padding:.25rem .75rem;border-radius:20px">🌐 No Cloud Dependency</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Challenges Grid -->
 <section class="section">
   <div class="container">
-    <div class="grid-2" id="challenges-grid" style="gap:2rem"></div>
+    <div class="grid-3" id="challenges-grid" style="gap:2rem"></div>
   </div>
 </section>
 
