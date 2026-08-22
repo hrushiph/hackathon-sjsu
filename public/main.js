@@ -159,9 +159,9 @@ function renderStats(containerId) {
   const s = CONFIG.event.stats;
   const items = [
     { num: s.participants, label: 'Participants' },
-    { num: s.prizes,       label: 'In Prizes'   },
+    { num: s.prizes,       label: 'Scholarships' },
     { num: s.mentors,      label: 'Mentors'      },
-    { num: s.hours,        label: 'Hours'        },
+    { num: s.hours,        label: 'Teams'        },
   ];
   el.innerHTML = items.map(i => `
     <div class="stat-item">

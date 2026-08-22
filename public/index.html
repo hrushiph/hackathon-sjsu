@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">HackSJSU — SJSU's Premier AI Hackathon</title>
-  <meta name="description" id="page-desc" content="HackSJSU is San Jose State University's flagship 24-hour hackathon co-powered by HP. Build, innovate, and win $20,000+ in prizes.">
+  <meta name="description" id="page-desc" content="HackSJSU is San Jose State University's flagship hackathon co-powered by HP. Build, innovate, and win $10,000 in scholarships.">
   <meta property="og:title" content="HackSJSU">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
@@ -38,7 +38,7 @@
       <div class="hero-meta">
         <div class="hero-meta-item"><span class="icon">📅</span> <span id="hero-date"></span></div>
         <div class="hero-meta-item"><span class="icon">📍</span> <span id="hero-location"></span></div>
-        <div class="hero-meta-item"><span class="icon">⏱</span> <span id="hero-hours"></span> Hours</div>
+        <div class="hero-meta-item"><span class="icon">🖥️</span> <span id="hero-hours"></span> Teams</div>
       </div>
 
       <!-- Countdown -->
@@ -70,6 +70,15 @@
         <span class="section-tag">About the Event</span>
         <h2 id="about-heading">What is <span class="gradient-text" id="about-event-name"></span>?</h2>
         <p style="margin:1.25rem 0 1.5rem;font-size:1.05rem;line-height:1.8" id="about-desc"></p>
+        
+        <!-- Co-host Logos -->
+        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);padding:0.75rem 1.25rem;border-radius:12px;width:fit-content">
+          <span style="font-size:0.75rem;color:var(--clr-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-right:0.5rem">Co-Hosted By</span>
+          <img src="assets/sponsors/sjsu.png" alt="SJSU Logo" style="height:32px;object-fit:contain">
+          <div style="width:1px;height:20px;background:rgba(255,255,255,0.15)"></div>
+          <img src="assets/sponsors/hp.png" alt="HP Logo" style="height:32px;object-fit:contain">
+        </div>
+
         <div style="display:flex;gap:1rem;flex-wrap:wrap">
           <a href="about.html" class="btn btn-primary">Learn More</a>
           <a href="schedule.html" class="btn btn-outline">View Schedule</a>
@@ -157,7 +166,7 @@
     <div class="cta-section">
       <span class="section-tag">Don't Miss Out</span>
       <h2>Ready to <span class="gradient-text">Hack?</span></h2>
-      <p id="cta-desc">Join hundreds of students, compete for $20,000+ in prizes, and build something amazing in 24 hours.</p>
+      <p id="cta-desc">Join hundreds of students, compete for $10,000 in scholarships, and build something amazing on our shared ZGX Nano devices.</p>
       <div class="cta-actions">
         <a href="register.html" class="btn btn-gold" id="cta-reg">🚀 Register Now — It's Free</a>
         <a href="challenges.html" class="btn btn-outline">Explore Challenges</a>
@@ -191,12 +200,11 @@
     document.getElementById('about-event-name').textContent = e.name;
     document.getElementById('about-desc').textContent       = e.description;
 
-    // About stats mini cards
     const miniStats = [
       { num: e.stats.participants, label: 'Participants', icon: '👥' },
-      { num: e.stats.prizes,       label: 'In Prizes',   icon: '🏆' },
-      { num: e.stats.mentors,      label: 'Mentors',     icon: '🧑‍💻' },
-      { num: e.stats.hours + 'h',  label: 'Non-stop',    icon: '⏱' },
+      { num: e.stats.prizes,       label: 'Scholarships', icon: '🏆' },
+      { num: e.stats.mentors,      label: 'Mentors',      icon: '🧑‍💻' },
+      { num: e.stats.hours,        label: 'Teams',        icon: '🖥️' },
     ];
     document.getElementById('about-stats-mini').innerHTML = miniStats.map(s => `
       <div style="background:rgba(0,85,162,0.08);border:1px solid var(--clr-border);border-radius:12px;padding:1.25rem;text-align:center">

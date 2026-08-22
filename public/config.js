@@ -48,7 +48,7 @@ const CONFIG = {
     name: "SJSUHack",
     edition: "2026",
     tagline: "Build. Innovate. Shape the Future.",
-    description: "SJSUHack is San Jose State University's flagship hackathon — co-powered by HP. SJSU students tackle real-world challenges using AI and emerging technologies, competing for $10,000 in prizes.",
+    description: "SJSUHack is San Jose State University's flagship hackathon — co-powered by HP. SJSU students tackle real-world challenges using AI and emerging technologies.",
     shortDesc: "SJSU's premier hackathon, powered by HP",
 
     // Eligibility
@@ -81,7 +81,7 @@ const CONFIG = {
       participants: "200+",
       prizes: "$10,000",
       mentors: "10+",
-      hours: "24",
+      hours: "25",
     },
 
     // Social links
