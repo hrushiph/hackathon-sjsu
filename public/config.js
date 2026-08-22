@@ -277,14 +277,14 @@ const CONFIG = {
       title: "Local Agentic Systems",
       emoji: "🤖",
       color: "#0096D6",
-      description: "Build autonomous AI agents that reason, plan, and act — without relying on cloud AI APIs. Use the shared devices to run multi-step agent pipelines that browse, code, summarize, and coordinate tasks entirely on local infrastructure.",
+      description: "Build autonomous AI agents that reason, plan, and act — entirely on local or hybrid infrastructure. Your agent runs on your device or our shared devices using multi-step reasoning and tool-use, with zero dependency on cloud AI APIs. This is the core track: pure local intelligence.",
       requirements: [
-        "Agent must run fully on local hardware or the shared devices",
+        "Agent must run fully on local hardware or the event's shared devices",
+        "Local or hybrid inference only — no cloud AI API calls for core reasoning",
         "Multi-step reasoning or tool-use required (not just single-turn chat)",
         "Agent should complete a real, useful task autonomously",
         "Demonstrate at least one agentic loop with tool calls in the live demo",
       ],
-      tools: ["Ollama + LangChain", "AutoGen (local)", "CrewAI", "Open Interpreter", "llama.cpp"],
       prize: "$3,000",
     },
     {
@@ -292,7 +292,7 @@ const CONFIG = {
       title: "Secure AI",
       emoji: "🔐",
       color: "#C0392B",
-      description: "AI security is the next frontier. Build systems that protect AI models from adversarial attacks, detect prompt injection, secure multi-user inference on shared devicess, or implement access controls for locally-deployed LLMs.",
+      description: "AI security is the next frontier. Build systems that protect AI models from adversarial attacks, detect prompt injection, secure multi-user inference on shared devices, or implement access controls for locally-deployed LLMs.",
       requirements: [
         "Project must address AI security — model, inference, or deployment layer",
         "Local or hybrid architecture required — demonstrate on the shared devices",

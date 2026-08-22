@@ -258,10 +258,6 @@ function renderChallenges(containerId, limit = 999) {
         <ul class="challenge-reqs">
           ${c.requirements.map(r => `<li>${r}</li>`).join('')}
         </ul>` : ''}
-      ${c.tools?.length ? `
-        <div class="tools-list">
-          ${c.tools.map(t => `<span class="tool-tag">${t}</span>`).join('')}
-        </div>` : ''}
     </div>`).join('');
   initFadeIn();
 }
