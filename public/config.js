@@ -417,7 +417,7 @@ const CONFIG = {
     },
     {
       day: "Hackathon",
-      date: "September 25, 2026",
+      date: "September 25, 2026 · ISB Labs - 8th Floor",
       events: [
         { time: "All Day", title: "⚡ Hacking Day", description: "The main build day. Teams work on their projects using the ZGX Nano and local infrastructure. Mentors and advisors circulate throughout the day.", type: "hacking", duration: "" },
         { time: "12:00 PM", title: "Lunch", description: "Catered lunch. Refuel and keep building!", type: "logistics", duration: "45 min" },
