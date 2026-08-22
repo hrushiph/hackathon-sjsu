@@ -250,7 +250,7 @@ const CONFIG = {
     {
       name: "HP Inc.",
       imageFile: "hp.png",
-      url: "https://www.hp.com",
+      url: "https://www.hp.com/us-en/workstations/zgx-nano-ai-station.html",
       description: "Technology sponsor and co-host",
     },
     {
