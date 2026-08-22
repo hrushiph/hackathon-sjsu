@@ -504,9 +504,7 @@ const CONFIG = {
       items: [
         { title: "HP Nano AI Projects (GitHub)", url: "https://github.com/curtburk?tab=repositories", description: "Official collection of HP ZGX Nano AI projects and starter code — browse real demos and reference implementations" },
         { title: "HP ZGX Nano AI Station", url: "https://www.hp.com/us-en/workstations/zgx-nano-ai-station.html", description: "Official specs and overview of the HP ZGX Nano edge AI workstation used at the event" },
-        { title: "Ollama — Run LLMs Locally", url: "https://ollama.com", description: "The fastest way to run Llama 3, Mistral, Phi-3, and other models on local hardware" },
-        { title: "LM Studio", url: "https://lmstudio.ai", description: "Desktop app for discovering, downloading, and running local LLMs with a GUI" },
-        { title: "llama.cpp", url: "https://github.com/ggerganov/llama.cpp", description: "Efficient CPU/GPU inference for GGUF-format models — great for edge hardware" },
+        { title: "HP ZGX Onboard — Get Started", url: "https://www.hp.com/us-en/workstations/zgx-onboard.html?jumpid=va_us_mu_mk_hc_r12139_aw_x_11233", description: "HP's official onboarding guide for the ZGX ecosystem — set up your environment and start building" },
         { title: "Hugging Face Model Hub", url: "https://huggingface.co/models", description: "Browse thousands of open-source models optimized for local deployment" },
       ],
     },
