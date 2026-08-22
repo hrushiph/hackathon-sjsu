@@ -32,7 +32,7 @@
         Local &amp; Hybrid <span class="gradient-text">Inference Only</span>
       </h2>
       <p style="max-width:640px;margin:0 auto;color:var(--clr-text-muted);font-size:1rem;line-height:1.7">
-        Every project's <strong style="color:var(--clr-text)">AI brain must run on-device or on our shared devices</strong> — not on a cloud AI API. This is the core principle that makes SJSUHack different.
+        Every project's <strong style="color:var(--clr-text)">AI inference must run on the event's shared devices</strong> — not on personal laptops or cloud AI APIs. This is the core principle that makes SJSUHack different.
       </p>
     </div>
 
@@ -41,7 +41,7 @@
       <div style="background:linear-gradient(135deg,rgba(0,85,162,.18),rgba(0,150,214,.10));border:1px solid rgba(0,150,214,.35);border-radius:14px;padding:1.5rem;text-align:center">
         <div style="font-size:2.2rem;margin-bottom:.75rem">🖥️</div>
         <h4 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:.4rem;color:var(--clr-text)">Shared Devices</h4>
-        <p style="font-size:.85rem;color:var(--clr-text-muted);line-height:1.6">All teams connect to our on-site shared devices — HP-powered machines ready for LLMs, image gen, and AI agents.</p>
+        <p style="font-size:.85rem;color:var(--clr-text-muted);line-height:1.6">All teams connect to our on-site shared devices — HP-powered machines ready for LLMs, image gen, and AI agents. <strong style="color:var(--clr-text)">No personal laptop inference.</strong></p>
       </div>
       <div style="background:linear-gradient(135deg,rgba(0,168,120,.15),rgba(0,85,162,.10));border:1px solid rgba(0,168,120,.30);border-radius:14px;padding:1.5rem;text-align:center">
         <div style="font-size:2.2rem;margin-bottom:.75rem">🔐</div>
@@ -119,7 +119,7 @@
     <div style="max-width:900px;margin:0 auto 2.5rem;background:rgba(0,168,120,.07);border:1px solid rgba(0,168,120,.25);border-radius:12px;padding:1rem 1.5rem;display:flex;align-items:flex-start;gap:1rem">
       <span style="font-size:1.4rem;flex-shrink:0;margin-top:.1rem">💡</span>
       <p style="font-size:.88rem;color:var(--clr-text-muted);line-height:1.7;margin:0">
-        <strong style="color:#00A878">What &ldquo;local&rdquo; means at SJSUHack:</strong> Your <strong style="color:var(--clr-text)">project&rsquo;s AI inference</strong> must run on your device or our shared devices — not on cloud AI APIs. You&rsquo;re completely free to use cloud tools for <strong style="color:var(--clr-text)">non-AI work</strong> like Google Slides, Canva, Figma, Loom, or YouTube for your presentation and video.
+        <strong style="color:#00A878">What &ldquo;local&rdquo; means at SJSUHack:</strong> Your <strong style="color:var(--clr-text)">project&rsquo;s AI inference</strong> must run on the <strong style="color:var(--clr-text)">event&rsquo;s shared devices</strong> — not on personal laptops or cloud AI APIs. Hybrid setups are allowed. You&rsquo;re completely free to use cloud tools for <strong style="color:var(--clr-text)">non-AI work</strong> like Google Slides, Canva, Figma, Loom, or YouTube for your presentation and video.
       </p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;max-width:900px;margin:0 auto;align-items:start">
@@ -127,10 +127,11 @@
         <span class="section-tag">What's Allowed</span>
         <h3 style="font-family:var(--font-heading);margin:.75rem 0 1rem">✅ You Can Use</h3>
         <ul class="challenge-reqs">
-          <li>Local open-source models (Llama, Mistral, Phi, Gemma, etc.)</li>
-          <li>The event&rsquo;s shared devices for AI inference</li>
+          <li>The event&rsquo;s shared devices for all AI inference</li>
+          <li>Open-source models (Llama, Mistral, Phi, Gemma, etc.) — run on the shared devices</li>
+          <li>Hybrid setups using the shared devices as your AI backend</li>
           <li>Open-source libraries and frameworks</li>
-          <li>Hugging Face model hub (local download &amp; run)</li>
+          <li>Hugging Face model hub (downloaded &amp; run on shared devices)</li>
           <li>HP developer tools, APIs, and on-site hardware</li>
           <li>Public datasets and open APIs (non-AI)</li>
           <li>UI component libraries and frontend tools</li>
@@ -142,8 +143,9 @@
         <span class="section-tag">What's Not Allowed</span>
         <h3 style="font-family:var(--font-heading);margin:.75rem 0 1rem">❌ You Cannot</h3>
         <ul class="challenge-reqs">
+          <li>Run AI inference on your personal laptop or personal machine</li>
           <li>Use cloud AI APIs (OpenAI, Gemini, Anthropic, etc.) <strong>as your project&rsquo;s core AI inference</strong></li>
-          <li>Use paid cloud GPU services for your AI model (AWS SageMaker, GCP Vertex, Azure ML)</li>
+          <li>Use paid cloud GPU services for AI (AWS SageMaker, GCP Vertex, Azure ML)</li>
           <li>Start coding before hacking begins</li>
           <li>Submit a project built before the event</li>
           <li>Use plagiarized code or violate open-source licenses</li>
