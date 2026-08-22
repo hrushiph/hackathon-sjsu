@@ -262,7 +262,7 @@ const CONFIG = {
     {
       name: "SJSU Applied Data Science",
       imageFile: "sjsu_ads.png",
-      url: "https://www.sjsu.edu/datascience/",
+      url: "https://sjsu.edu/applied-data-science/",
       description: "SJSU's Applied Data Science program",
     },
   ],
