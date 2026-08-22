@@ -500,52 +500,88 @@ const CONFIG = {
   // ─────────────────────────────────────────────
   resources: [
     {
-      category: "🛠 Starter Kits",
+      category: "🖥️ ZGX Nano & Local Inference",
       items: [
-        { title: "HackSJSU Starter Kit (GitHub)", url: "#", description: "Official boilerplate and project templates for all tracks" },
-        { title: "HP Developer Resources", url: "https://developers.hp.com", description: "HP API documentation, SDKs, and developer tools" },
+        { title: "HP ZGX Nano AI Station", url: "https://www.hp.com/us-en/workstations/zgx-nano-ai-station.html", description: "Official specs and overview of the HP ZGX Nano edge AI workstation used at the event" },
+        { title: "Ollama — Run LLMs Locally", url: "https://ollama.com", description: "The fastest way to run Llama 3, Mistral, Phi-3, and other models on local hardware" },
+        { title: "LM Studio", url: "https://lmstudio.ai", description: "Desktop app for discovering, downloading, and running local LLMs with a GUI" },
+        { title: "llama.cpp", url: "https://github.com/ggerganov/llama.cpp", description: "Efficient CPU/GPU inference for GGUF-format models — great for edge hardware" },
+        { title: "Hugging Face Model Hub", url: "https://huggingface.co/models", description: "Browse thousands of open-source models optimized for local deployment" },
       ],
     },
     {
-      category: "🤖 AI & ML APIs",
+      category: "🤖 Agentic AI Frameworks",
       items: [
-        { title: "OpenAI API", url: "https://platform.openai.com", description: "GPT-4o, DALL-E 3, Whisper, Assistants API" },
-        { title: "Google Gemini API", url: "https://ai.google.dev", description: "Multimodal AI by Google DeepMind — free tier available" },
-        { title: "Anthropic Claude", url: "https://anthropic.com", description: "Claude 3.5 Sonnet — great for long-context tasks" },
-        { title: "Hugging Face", url: "https://huggingface.co", description: "Open-source models, datasets, and Inference API" },
-        { title: "Cohere", url: "https://cohere.com", description: "NLP APIs for classification, embeddings, and generation" },
-        { title: "Replicate", url: "https://replicate.com", description: "Run any open-source AI model via API" },
+        { title: "LangChain (Local Models)", url: "https://python.langchain.com/docs/guides/local_llms", description: "Build multi-step agentic pipelines using Ollama or llama.cpp as the LLM backend" },
+        { title: "LlamaIndex", url: "https://www.llamaindex.ai", description: "Data framework for connecting LLMs to your own data — supports local models" },
+        { title: "AutoGen by Microsoft", url: "https://microsoft.github.io/autogen/", description: "Framework for building multi-agent AI systems with tool-use and reasoning loops" },
+        { title: "CrewAI", url: "https://www.crewai.com", description: "Orchestrate role-playing, autonomous AI agents that collaborate on tasks" },
+        { title: "OpenAI Function Calling (local via Ollama)", url: "https://ollama.com/blog/tool-support", description: "Use tool/function calling with local Ollama models for agentic loops" },
+        { title: "n8n — Local AI Workflows", url: "https://n8n.io", description: "Self-hosted workflow automation with built-in local LLM nodes" },
       ],
     },
     {
-      category: "☁️ Cloud & Hosting",
+      category: "🔐 AI Security & Privacy",
       items: [
-        { title: "Google Cloud Platform", url: "https://cloud.google.com", description: "$300 free credits for new accounts" },
-        { title: "Microsoft Azure", url: "https://azure.microsoft.com", description: "Student credits via Azure for Students" },
-        { title: "Firebase", url: "https://firebase.google.com", description: "Free hosting, database, and auth by Google" },
-        { title: "Vercel", url: "https://vercel.com", description: "Free frontend hosting — deploys from GitHub in seconds" },
-        { title: "Supabase", url: "https://supabase.com", description: "Open-source Firebase alternative with PostgreSQL" },
+        { title: "Garak — LLM Vulnerability Scanner", url: "https://github.com/leondz/garak", description: "Open-source tool for probing LLMs for prompt injection, jailbreaks, and vulnerabilities" },
+        { title: "LLM Guard", url: "https://llm-guard.com", description: "Security toolkit for sanitizing LLM inputs and outputs — detects injection and PII leaks" },
+        { title: "Presidio (Microsoft)", url: "https://microsoft.github.io/presidio/", description: "Local PII detection and anonymization to protect user data during inference" },
+        { title: "PrivateGPT", url: "https://github.com/zylon-ai/private-gpt", description: "100% local RAG system — no data leaves your machine" },
+        { title: "OWASP LLM Top 10", url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/", description: "The definitive guide to LLM security vulnerabilities — essential reading for the Secure AI track" },
+      ],
+    },
+    {
+      category: "📊 Supply Chain & Enterprise AI",
+      items: [
+        { title: "iTradeNetwork", url: "https://www.itradenetwork.com/", description: "Our industry sponsor — enterprise supply chain technology platform connecting the fresh food industry" },
+        { title: "Pandas — Data Analysis", url: "https://pandas.pydata.org", description: "The go-to Python library for supply chain data wrangling and analysis" },
+        { title: "DuckDB", url: "https://duckdb.org", description: "Fast, local SQL analytics engine — great for offline supply chain data processing" },
+        { title: "Chroma DB", url: "https://www.trychroma.com", description: "Local vector database for building AI-powered search over enterprise documents" },
+        { title: "Apache Superset", url: "https://superset.apache.org", description: "Open-source data visualization for supply chain dashboards and analytics" },
+      ],
+    },
+    {
+      category: "🎨 Generative AI & Creative Tools",
+      items: [
+        { title: "Stable Diffusion (ComfyUI)", url: "https://github.com/comfyanonymous/ComfyUI", description: "Powerful local image generation with a node-based workflow interface" },
+        { title: "AUTOMATIC1111 WebUI", url: "https://github.com/AUTOMATIC1111/stable-diffusion-webui", description: "Feature-rich local Stable Diffusion interface — easy to set up on the ZGX Nano" },
+        { title: "Bark TTS", url: "https://github.com/suno-ai/bark", description: "Local text-to-audio model — generate speech, music, and sound effects" },
+        { title: "Whisper (local)", url: "https://github.com/openai/whisper", description: "Offline speech-to-text transcription from OpenAI — runs fully on-device" },
+        { title: "Kokoro TTS", url: "https://github.com/hexgrad/kokoro", description: "Fast, high-quality local text-to-speech synthesis" },
+      ],
+    },
+    {
+      category: "⚖️ Responsible AI & Explainability",
+      items: [
+        { title: "SHAP", url: "https://shap.readthedocs.io", description: "Explain model predictions with Shapley values — works with any ML model locally" },
+        { title: "LIME", url: "https://github.com/marcotcr/lime", description: "Local interpretable model-agnostic explanations for AI predictions" },
+        { title: "IBM AI Fairness 360", url: "https://aif360.mybluemix.net", description: "Toolkit for detecting and mitigating bias in AI models" },
+        { title: "Evidently AI", url: "https://www.evidentlyai.com", description: "Open-source ML observability — monitor model drift, data quality, and fairness" },
+        { title: "ML Commons Croissant", url: "https://mlcommons.org/croissant/", description: "Standard dataset format for documenting data provenance and responsible use" },
+      ],
+    },
+    {
+      category: "🛠️ Dev Tools & Frameworks",
+      items: [
+        { title: "FastAPI", url: "https://fastapi.tiangolo.com", description: "Fast Python API framework — ideal for wrapping local models in a REST API" },
+        { title: "Gradio", url: "https://www.gradio.app", description: "Build shareable ML demos and UIs in pure Python in minutes" },
+        { title: "Streamlit", url: "https://streamlit.io", description: "Turn Python scripts into interactive data apps instantly" },
+        { title: "Docker", url: "https://www.docker.com", description: "Containerize your AI app for easy demo and deployment" },
+        { title: "GitHub Student Pack", url: "https://education.github.com/pack", description: "Free tools, credits, and services for student developers" },
       ],
     },
     {
       category: "📚 Learning & Reference",
       items: [
-        { title: "fast.ai", url: "https://fast.ai", description: "Practical deep learning — free course" },
-        { title: "Kaggle Learn", url: "https://kaggle.com/learn", description: "Free ML micro-courses with notebooks" },
-        { title: "CS50 AI (Harvard)", url: "https://cs50.harvard.edu/ai", description: "Intro to AI with Python — free online" },
-        { title: "LangChain Docs", url: "https://python.langchain.com", description: "Framework for building LLM-powered apps" },
-      ],
-    },
-    {
-      category: "🎨 Design & UI",
-      items: [
-        { title: "Figma", url: "https://figma.com", description: "Free collaborative design and prototyping" },
-        { title: "shadcn/ui", url: "https://ui.shadcn.com", description: "Beautiful React components, copy-paste ready" },
-        { title: "Tailwind CSS", url: "https://tailwindcss.com", description: "Utility-first CSS framework" },
-        { title: "Framer Motion", url: "https://framer.com/motion", description: "Animation library for React" },
+        { title: "fast.ai — Practical Deep Learning", url: "https://fast.ai", description: "Hands-on deep learning course — free and beginner-friendly" },
+        { title: "Andrej Karpathy — Neural Networks: Zero to Hero", url: "https://karpathy.ai/zero-to-hero.html", description: "Build neural networks from scratch — outstanding for understanding local models" },
+        { title: "SJSU Applied Data Science Program", url: "https://sjsu.edu/applied-data-science/", description: "SJSU's interdisciplinary MS program in Applied Data Science — our academic partner" },
+        { title: "Kaggle Learn", url: "https://kaggle.com/learn", description: "Free ML micro-courses with Jupyter notebooks" },
+        { title: "LangChain Academy", url: "https://academy.langchain.com", description: "Free courses on building real-world LLM applications and agents" },
       ],
     },
   ],
+
 
   // ─────────────────────────────────────────────
   // ABOUT — Descriptions for the About page
