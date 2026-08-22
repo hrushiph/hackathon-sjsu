@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judges — HackSJSU</title>
-  <meta name="description" content="Meet the expert judges of HackSJSU — industry leaders from tech, academia, and innovation who will evaluate your projects.">
+  <meta name="description"
+    content="Meet the expert judges of HackSJSU — industry leaders from tech, academia, and innovation who will evaluate your projects.">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
 </head>
+
 <body>
-<div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-grid"></div>
-  <div class="container page-hero-content">
-    <span class="section-tag">Expert Panel</span>
-    <h1>Meet the <span class="gradient-text">Judges</span></h1>
-    <p>Our distinguished panel of judges brings decades of experience from Silicon Valley, academia, and the AI industry. They will evaluate your projects across all tracks.</p>
-  </div>
-</section>
-
-<!-- Judges Grid -->
-<section class="section">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:0 auto;" id="judges-grid"></div>
-  </div>
-</section>
-
-<!-- Judging Note -->
-<section class="section-sm" style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
-  <div class="container">
-    <div style="max-width:640px;margin:0 auto;text-align:center">
-      <h3 style="font-family:var(--font-heading);margin-bottom:1rem">How Judging Works</h3>
-      <p style="line-height:1.8;margin-bottom:1.5rem">During the Demo Fair, judges will circulate through all project tables, spending 5–7 minutes with each team. They'll ask questions about your approach, technology choices, and impact. After the fair, judges deliberate and score each project using our standardized rubric.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="judging-criteria.html" class="btn btn-outline">View Judging Criteria</a>
-        <a href="schedule.html" class="btn btn-outline">See Demo Fair Schedule</a>
+  <!-- Want to be a Judge? -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Want to <span class="gradient-text">Judge?</span></h2>
+        <p>Are you an industry professional or academic who'd like to participate as a judge? We'd love to hear from
+          you.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold">Get in Touch</a>
+          <a href="mentors.html" class="btn btn-outline">Meet the Mentors</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Want to be a Judge? -->
-<section class="section">
-  <div class="container">
-    <div class="cta-section">
-      <h2>Want to <span class="gradient-text">Judge?</span></h2>
-      <p>Are you an industry professional or academic who'd like to participate as a judge? We'd love to hear from you.</p>
-      <div class="cta-actions">
-        <a href="contact.html" class="btn btn-gold">Get in Touch</a>
-        <a href="mentors.html" class="btn btn-outline">Meet the Mentors</a>
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="container page-hero-content">
+      <span class="section-tag">Expert Panel</span>
+      <h1>Meet the <span class="gradient-text">Judges</span></h1>
+      <p>Our distinguished panel of judges brings decades of experience from Silicon Valley, academia, and the AI
+        industry. They will evaluate your projects across all tracks.</p>
+    </div>
+  </section>
+
+  <!-- Judging Day Banner -->
+  <section class="section-sm" style="background:linear-gradient(135deg,rgba(0,85,162,0.15),rgba(0,150,214,0.10));border-top:1px solid rgba(0,85,162,0.3);border-bottom:1px solid rgba(0,85,162,0.3)">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;text-align:center">
+        <div style="font-size:2.5rem">🏛️</div>
+        <div>
+          <div style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;background:var(--grad-cta);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.3rem">Finals &amp; Judging Day — September 26, 2026</div>
+          <div style="color:var(--clr-text-muted);font-size:0.95rem">📍 SJSU Student Union Ballroom, 2nd Floor &nbsp;·&nbsp; 🏆 Awards Ceremony at 2:40 PM</div>
+        </div>
+        <a href="schedule.html" class="btn btn-outline" style="white-space:nowrap">View Full Schedule →</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div id="footer-placeholder"></div>
-<script src="main.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    renderJudges('judges-grid');
-  });
-</script>
+  <!-- Judges Grid -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:0 auto;"
+        id="judges-grid"></div>
+    </div>
+  </section>
+
+  <!-- Judging Note -->
+  <section class="section-sm"
+    style="background:var(--clr-card);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+    <div class="container">
+      <div style="max-width:640px;margin:0 auto;text-align:center">
+        <h3 style="font-family:var(--font-heading);margin-bottom:1rem">How Judging Works</h3>
+        <p style="line-height:1.8;margin-bottom:1.5rem">On <strong>September 26th</strong> at the SJSU Student Union Ballroom (2nd Floor), judges will circulate through all project
+          tables during the Demo Fair, spending 5–7 minutes with each team. They'll ask questions about your approach, technology choices,
+          and impact. After the fair, judges deliberate and score each project using our standardized rubric. The Awards Ceremony begins at <strong>2:40 PM</strong>.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="judging-criteria.html" class="btn btn-outline">View Judging Criteria</a>
+          <a href="schedule.html" class="btn btn-outline">See Demo Fair Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div id="footer-placeholder"></div>
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderJudges('judges-grid');
+    });
+  </script>
 </body>
+
 </html>

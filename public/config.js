@@ -511,12 +511,7 @@ const CONFIG = {
     {
       category: "🤖 Agentic AI Frameworks",
       items: [
-        { title: "LangChain (Local Models)", url: "https://python.langchain.com/docs/guides/local_llms", description: "Build multi-step agentic pipelines using Ollama or llama.cpp as the LLM backend" },
-        { title: "LlamaIndex", url: "https://www.llamaindex.ai", description: "Data framework for connecting LLMs to your own data — supports local models" },
-        { title: "AutoGen by Microsoft", url: "https://microsoft.github.io/autogen/", description: "Framework for building multi-agent AI systems with tool-use and reasoning loops" },
-        { title: "CrewAI", url: "https://www.crewai.com", description: "Orchestrate role-playing, autonomous AI agents that collaborate on tasks" },
-        { title: "OpenAI Function Calling (local via Ollama)", url: "https://ollama.com/blog/tool-support", description: "Use tool/function calling with local Ollama models for agentic loops" },
-        { title: "n8n — Local AI Workflows", url: "https://n8n.io", description: "Self-hosted workflow automation with built-in local LLM nodes" },
+        { title: "LangChain (Local Models)", url: "#", description: "Use any agentic AI Frameworks." },
       ],
     },
     {
