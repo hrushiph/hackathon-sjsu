@@ -415,7 +415,7 @@ const CONFIG = {
         { time: "4:00 PM", title: "Workshop: HP Developer Tools", description: "Deep-dive into HP's developer ecosystem and HP AI Studio.", type: "workshop", duration: "60 min" },
         { time: "6:00 PM", title: "Dinner", description: "Catered dinner. Refuel, recharge, and keep hacking!", type: "logistics", duration: "45 min" },
         { time: "8:00 PM", title: "Office Hours with Advisory Board", description: "Sign up at the advisor table for 1:1 sessions with our industry advisors.", type: "mentoring", duration: "120 min" },
-        { time: "10:00 PM", title: "⏰ Hacking Ends — Submissions Due", description: "All coding must stop. Submit your project via the registration form before this deadline.", type: "event", duration: "" },
+        { time: "10:00 PM", title: "⏰ Hacking Ends — Submissions Due", description: "All coding must stop. Submit all three deliverables: Git repo, Slide deck, and 2-min demo video — via the registration form before this deadline.", type: "event", duration: "" },
       ],
     },
     {
@@ -485,6 +485,10 @@ const CONFIG = {
     {
       question: "Will I get a certificate of participation?",
       answer: "Yes! All participants who submit a project will receive a digital certificate of participation. Winners receive additional recognition certificates.",
+    },
+    {
+      question: "What do I need to submit?",
+      answer: "Every team must submit three deliverables before the Sept 26 hacking deadline: (1) a public Git repository (GitHub/GitLab) with source code and a README, (2) a Slide Deck (PDF or Google Slides link) covering your problem, solution, and architecture, and (3) a 2-minute max demo video (YouTube, Drive, or Loom) showing your project in action. All three are required.",
     },
     {
       question: "I have more questions — who do I contact?",
