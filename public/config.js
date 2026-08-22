@@ -255,8 +255,8 @@ const CONFIG = {
     },
     {
       name: "iTradeNetwork",
-      imageFile: "itradenetwork.png",
-      url: "#",
+      imageFile: "itradenetwork.webp",
+      url: "https://www.itradenetwork.com/",
       description: "Enterprise supply chain technology sponsor",
     },
     {
