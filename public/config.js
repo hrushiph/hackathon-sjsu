@@ -396,39 +396,51 @@ const CONFIG = {
 
   // ─────────────────────────────────────────────
   // SCHEDULE — Event timeline
-  // Day 1 (Sept 25): Hackathon day — teams hack
-  // Day 2 (Sept 26): Keynote, presentations & awards
+  // Day 0 (Sept 21): Kickoff evening
+  // Day 1 (Sept 25): Full hackathon day — teams hack & submit by 8PM
+  // Day 2 (Sept 26): Final day — SJSU Student Union Ballroom, 2nd Floor
   // Types: "keynote" | "hacking" | "workshop" | "mentoring" | "logistics" | "judging" | "event"
-  // NOTE: Detailed schedule is being finalized — update times below when ready.
   // ─────────────────────────────────────────────
   schedule: [
+    {
+      day: "Kickoff — Sept 21",
+      date: "September 21, 2026",
+      events: [
+        { time: "5:30 PM", title: "🚀 Official Kickoff", description: "The journey begins! Join us for the official SJSUHack kickoff — meet your fellow participants, learn the rules, explore the challenges, and get cluster access set up.", type: "keynote", duration: "~2 hrs" },
+        { time: "5:30 PM", title: "Intro & Welcome", description: "Welcome remarks from the organizing team. Overview of SJSUHack, the vision behind local agentic AI, and what to expect over the coming days.", type: "event", duration: "20 min" },
+        { time: "5:50 PM", title: "Rubric & Judging Criteria", description: "Walk-through of the judging rubric — HP product integration, innovation, technical complexity, impact, and presentation. Q&A with judges panel.", type: "event", duration: "20 min" },
+        { time: "6:10 PM", title: "Challenge Tracks Overview", description: "Deep-dive into all six challenge tracks. Understand the scope, requirements, and tools available for each category.", type: "event", duration: "25 min" },
+        { time: "6:35 PM", title: "Shared GPU Cluster Access", description: "Technical onboarding — connect to the shared GPU compute cluster, verify your access, and run your first local model. Support team on hand to help.", type: "workshop", duration: "30 min" },
+        { time: "7:05 PM", title: "Team Formation & Networking", description: "Find your team! Solo participants connect with potential teammates. Mentors and advisors available for initial project ideation.", type: "logistics", duration: "" },
+      ],
+    },
     {
       day: "Day 1 — Hackathon",
       date: "September 25, 2026",
       events: [
-        { time: "8:00 AM", title: "Check-in & Breakfast", description: "Arrive, grab your badge and t-shirt, and enjoy breakfast with fellow hackers.", type: "logistics", duration: "60 min" },
-        { time: "9:00 AM", title: "Orientation & Team Formation", description: "Welcome briefing, rules overview, and team-matching session for solo participants.", type: "event", duration: "60 min" },
-        { time: "10:00 AM", title: "🚀 Hacking Begins!", description: "The clock starts now. Start building your project — good luck!", type: "hacking", duration: "" },
-        { time: "12:00 PM", title: "Lunch", description: "Catered lunch served in the main hall. Keep building!", type: "logistics", duration: "45 min" },
-        { time: "2:00 PM", title: "Workshop: Building with AI APIs", description: "Hands-on session covering OpenAI, Gemini, and LangChain. Presented by HP engineers.", type: "workshop", duration: "60 min" },
-        { time: "4:00 PM", title: "Workshop: HP Developer Tools", description: "Deep-dive into HP's developer ecosystem and HP AI Studio.", type: "workshop", duration: "60 min" },
-        { time: "6:00 PM", title: "Dinner", description: "Catered dinner. Refuel, recharge, and keep hacking!", type: "logistics", duration: "45 min" },
-        { time: "8:00 PM", title: "Office Hours with Advisory Board", description: "Sign up at the advisor table for 1:1 sessions with our industry advisors.", type: "mentoring", duration: "120 min" },
-        { time: "10:00 PM", title: "⏰ Hacking Ends — Submissions Due", description: "All coding must stop. Submit all three deliverables: Git repo, Slide deck, and 2-min demo video — via the registration form before this deadline.", type: "event", duration: "" },
+        { time: "All Day", title: "⚡ Hacking Day", description: "The main build day. Teams work on their projects using the shared GPU cluster and local infrastructure. Mentors and advisors circulate throughout the day.", type: "hacking", duration: "" },
+        { time: "12:00 PM", title: "Lunch", description: "Catered lunch. Refuel and keep building!", type: "logistics", duration: "45 min" },
+        { time: "2:00 PM", title: "Office Hours — Advisory Board", description: "Sign up at the advisor table for focused 1:1 sessions with our industry advisors and mentors.", type: "mentoring", duration: "120 min" },
+        { time: "6:00 PM", title: "Dinner", description: "Catered dinner. Final push before submissions close!", type: "logistics", duration: "45 min" },
+        { time: "8:00 PM", title: "⏰ Hacking Ends — Submissions Due", description: "All coding must stop at 8 PM. Submit all three deliverables — Git repo, Slide deck, and 2-min demo video — before this hard deadline. No late submissions accepted.", type: "event", duration: "" },
       ],
     },
     {
-      day: "Day 2 — Presentations & Awards",
-      date: "September 26, 2026",
+      day: "Day 2 — Finals",
+      date: "September 26, 2026 · SJSU Student Union Ballroom, 2nd Floor",
       events: [
-        { time: "9:00 AM", title: "Welcome & Keynote Address", description: "Opening remarks from SJSU leadership and HP, followed by the keynote address.", type: "keynote", duration: "60 min" },
-        { time: "10:00 AM", title: "Team Presentations Begin", description: "Teams present their projects to judges and the audience. Each team gets a dedicated time slot.", type: "judging", duration: "" },
-        { time: "12:00 PM", title: "Lunch", description: "Catered lunch break during the presentation rounds.", type: "logistics", duration: "45 min" },
-        { time: "1:00 PM", title: "Presentations Continue", description: "Second round of team presentations to the judging panel.", type: "judging", duration: "" },
-        { time: "3:00 PM", title: "Judge Deliberation", description: "Judges score and deliberate on winners.", type: "judging", duration: "60 min" },
-        { time: "4:00 PM", title: "🏆 Award Ceremony", description: "Winners announced! Prize distribution, sponsor recognition, and thank-you's.", type: "keynote", duration: "60 min" },
-        { time: "5:00 PM", title: "Networking & Wrap-Up", description: "Celebrate your achievement! Connect with sponsors, judges, and fellow hackers.", type: "logistics", duration: "60 min" },
-        { time: "6:00 PM", title: "Event Ends", description: "Thanks for making SJSUHack 2026 amazing. See you next year!", type: "event", duration: "" },
+        { time: "9:00 AM", title: "Morning Session Begins", description: "Doors open at the SJSU Student Union Ballroom, 2nd Floor. Welcome to Finals Day!", type: "keynote", duration: "" },
+        { time: "9:00 AM", title: "🏅 6 Finalists Announced", description: "Organizers reveal the six finalist teams selected from Sept 25 submissions. Finalists are notified and given time to prepare their live presentation.", type: "judging", duration: "30 min" },
+        { time: "9:30 AM", title: "Judge Tours", description: "Judges tour finalist project stations for an initial walkthrough of each project — 20 minutes total.", type: "judging", duration: "20 min" },
+        { time: "10:00 AM", title: "Networking Session & Lunch", description: "Open networking for all participants, judges, advisors, and sponsors. Lunch served. Connect, celebrate, and enjoy the community.", type: "logistics", duration: "40 min" },
+        { time: "10:40 AM", title: "🎤 Keynote Addresses", description: "Industry keynotes from our speakers and advisory board. Inspiring talks on the future of local AI, agentic systems, and responsible innovation.", type: "keynote", duration: "" },
+        { time: "12:00 PM", title: "Afternoon Session", description: "The stage shifts to final presentations — six finalist teams present to the judging panel and audience.", type: "judging", duration: "" },
+        { time: "12:00 PM", title: "Final Presentations", description: "Each of the six finalist teams delivers their live demo and pitch to the judges. Teams have equal time to showcase their local AI project.", type: "judging", duration: "" },
+        { time: "3:30 PM", title: "Judge Deliberation", description: "Judges score and deliberate privately. Finalists take questions from the audience.", type: "judging", duration: "45 min" },
+        { time: "4:15 PM", title: "🙏 Thank You — by Himant", description: "Appreciation remarks for all participants, volunteers, sponsors, and the SJSU community. Delivered by Himant.", type: "keynote", duration: "10 min" },
+        { time: "4:25 PM", title: "🏆 Awards Ceremony — by Prof. Shim", description: "Winners announced and prizes awarded. Grand Prize, Runner-Up, and special category awards presented by Professor Shim.", type: "keynote", duration: "20 min" },
+        { time: "4:45 PM", title: "🎯 Closing & Takeaways — by Rick", description: "Closing remarks and key takeaways from the event. What we built, what we learned, and where local agentic AI goes next. Delivered by Rick.", type: "keynote", duration: "15 min" },
+        { time: "5:00 PM", title: "Event Ends", description: "Thank you for being part of SJSUHack 2026. See you next year!", type: "event", duration: "" },
       ],
     },
   ],
