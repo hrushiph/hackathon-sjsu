@@ -186,6 +186,7 @@ function renderJudges(containerId, limit = 999) {
         <div class="person-card-name">${j.name}</div>
         <div class="person-card-title">${j.title}</div>
         <div class="person-card-company">${j.company}</div>
+        ${j.tag ? `<span class="person-card-tag">⭐ ${j.tag}</span>` : ''}
         ${j.bio ? `<div class="person-card-bio">${j.bio}</div>` : ''}
         <div class="person-card-links">
           ${j.linkedin && j.linkedin !== '#' ? `<a href="${j.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}

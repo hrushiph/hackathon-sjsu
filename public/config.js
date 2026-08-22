@@ -159,6 +159,7 @@ const CONFIG = {
       imageFile: "rohith_iyengar.jpg",      // ← Upload real photo
       bio: "SJSU Alumni and AI engineer at HP Labs working on cutting-edge AI and machine learning applications for enterprise and edge computing.",
       linkedin: "https://www.linkedin.com/in/rohithiyengar/",
+      tag: "SJSU Alumni",
     },
     {
       name: "Hariharasubramanian C.S.",
@@ -175,6 +176,7 @@ const CONFIG = {
       imageFile: "hrushikesh_pokala.jpg",
       bio: "MSADI alumnus at SJSU and senior engineer at Equifax. Brings experience in financial data platforms and AI-driven insights at enterprise scale.",
       linkedin: "https://www.linkedin.com/in/hrushiph/",
+      tag: "SJSU Alumni",
     },
     {
       name: "Surbhi Gupta",
