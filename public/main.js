@@ -5,6 +5,8 @@
  * Loaded on every page after config.js.
  */
 
+const LINKEDIN_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>`;
+
 // ─── Navbar ───────────────────────────────────────────────
 function renderNav() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -186,10 +188,10 @@ function renderJudges(containerId, limit = 999) {
         <div class="person-card-name">${j.name}</div>
         <div class="person-card-title">${j.title}</div>
         <div class="person-card-company">${j.company}</div>
-        ${j.tag ? `<span class="person-card-tag">⭐ ${j.tag}</span>` : ''}
+        ${j.tag ? `<span class="person-card-tag">🎓 ${j.tag}</span>` : ''}
         ${j.bio ? `<div class="person-card-bio">${j.bio}</div>` : ''}
         <div class="person-card-links">
-          ${j.linkedin && j.linkedin !== '#' ? `<a href="${j.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
+          ${j.linkedin && j.linkedin !== '#' ? `<a href="${j.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${LINKEDIN_ICON}</a>` : ''}
         </div>
       </div>
     </div>`).join('');
@@ -213,10 +215,10 @@ function renderMentors(containerId, limit = 999) {
         <div class="person-card-name">${m.name}</div>
         <div class="person-card-title">${m.title}</div>
         <div class="person-card-company">${m.company}</div>
-        ${m.tag ? `<span class="person-card-tag">⭐ ${m.tag}</span>` : ''}
+        ${m.tag ? `<span class="person-card-tag">🎓 ${m.tag}</span>` : ''}
         ${m.bio ? `<div class="person-card-bio">${m.bio}</div>` : ''}
         <div class="person-card-links">
-          ${m.linkedin && m.linkedin !== '#' ? `<a href="${m.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
+          ${m.linkedin && m.linkedin !== '#' ? `<a href="${m.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${LINKEDIN_ICON}</a>` : ''}
         </div>
       </div>
     </div>`).join('');
@@ -442,7 +444,7 @@ function renderKeynoteSpeakers(containerId) {
         <div class="person-card-company">${s.company}</div>
         ${s.bio ? `<div class="person-card-bio">${s.bio}</div>` : ''}
         <div class="person-card-links">
-          ${s.linkedin && s.linkedin !== '#' ? `<a href="${s.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
+          ${s.linkedin && s.linkedin !== '#' ? `<a href="${s.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${LINKEDIN_ICON}</a>` : ''}
         </div>
       </div>
     </div>`).join('');
@@ -468,10 +470,10 @@ function renderAdvisoryPanel(containerId) {
         <div class="person-card-name">${a.name}</div>
         <div class="person-card-title">${a.title}</div>
         <div class="person-card-company">${a.company}</div>
-        ${a.tag ? `<span class="person-card-tag">⭐ ${a.tag}</span>` : ''}
+        ${a.tag ? `<span class="person-card-tag">🎓 ${a.tag}</span>` : ''}
         ${a.bio ? `<div class="person-card-bio">${a.bio}</div>` : ''}
         <div class="person-card-links">
-          ${a.linkedin && a.linkedin !== '#' ? `<a href="${a.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>` : ''}
+          ${a.linkedin && a.linkedin !== '#' ? `<a href="${a.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${LINKEDIN_ICON}</a>` : ''}
         </div>
       </div>
     </div>`).join('');
