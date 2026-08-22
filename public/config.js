@@ -304,6 +304,20 @@ const CONFIG = {
     },
     {
       id: 3,
+      title: "AI-Powered Productivity",
+      emoji: "⚡",
+      color: "#E5A823",
+      description: "Build tools that amplify human productivity using AI — smart assistants, workflow automation, knowledge management, or intelligent collaboration. All inference runs locally or on the shared GPU cluster, ensuring speed, privacy, and offline capability.",
+      requirements: [
+        "AI inference must not depend on cloud AI APIs — run on your device or the shared cluster",
+        "Clear productivity use case with measurable user benefit",
+        "Working prototype with a real-world workflow demo",
+      ],
+      tools: ["LangChain (local models)", "Ollama", "LlamaIndex", "Chroma DB", "n8n + local LLM"],
+      prize: "$3,000",
+    },
+    {
+      id: 4,
       title: "AI for Community Impact",
       emoji: "🌐",
       color: "#0055A2",
@@ -318,7 +332,7 @@ const CONFIG = {
       prize: "$3,000",
     },
     {
-      id: 4,
+      id: 5,
       title: "Generative AI & Creative Tech",
       emoji: "🎨",
       color: "#7B2FBE",
@@ -330,20 +344,6 @@ const CONFIG = {
         "Document your model selection and why it runs well on local hardware",
       ],
       tools: ["Stable Diffusion (local)", "ComfyUI", "Ollama", "Bark TTS", "AUTOMATIC1111"],
-      prize: "$3,000",
-    },
-    {
-      id: 5,
-      title: "AI-Powered Productivity",
-      emoji: "⚡",
-      color: "#E5A823",
-      description: "Build tools that amplify human productivity using AI — smart assistants, workflow automation, knowledge management, or intelligent collaboration. All inference runs locally or on the shared GPU cluster, ensuring speed, privacy, and offline capability.",
-      requirements: [
-        "AI inference must not depend on cloud AI APIs — run on your device or the shared cluster",
-        "Clear productivity use case with measurable user benefit",
-        "Working prototype with a real-world workflow demo",
-      ],
-      tools: ["LangChain (local models)", "Ollama", "LlamaIndex", "Chroma DB", "n8n + local LLM"],
       prize: "$3,000",
     },
     {
