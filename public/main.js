@@ -159,7 +159,7 @@ function renderStats(containerId) {
   const s = CONFIG.event.stats;
   const items = [
     { num: s.participants, label: 'Participants' },
-    { num: s.prizes,       label: 'Scholarships' },
+    { num: s.prizes,       label: 'For Winning Teams' },
     { num: s.mentors,      label: 'Mentors'      },
     { num: s.hours,        label: 'Teams'        },
   ];

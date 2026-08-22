@@ -79,7 +79,7 @@ const CONFIG = {
     // Stats bar on homepage
     stats: {
       participants: "200+",
-      prizes: "$10,000",
+      prizes: "Prizes",
       mentors: "10+",
       hours: "25",
     },
@@ -364,25 +364,25 @@ const CONFIG = {
   ],
 
   // ─────────────────────────────────────────────
-  // PRIZES  (Total pool: $10,000)
+  // PRIZES
   // ─────────────────────────────────────────────
   prizes: {
     overall: [
       {
         place: "🥇 Grand Prize",
-        amount: "$5,000",
-        perks: ["Cash prize split among team", "HP hardware bundle", "Fast-track interviews at HP", "6-month mentorship opportunity", "Trophy & certificates"],
+        amount: "Prizes & Hardware",
+        perks: ["HP hardware bundle", "Fast-track interviews at HP", "6-month mentorship opportunity", "Trophy & certificates"],
         highlight: true,
       },
       {
         place: "🥈 Runner-Up",
-        amount: "$3,000",
-        perks: ["Cash prize split among team", "HP accessories pack", "SJSU CS recognition", "Certificates"],
+        amount: "Prizes & Accessories",
+        perks: ["HP accessories pack", "SJSU CS recognition", "Certificates"],
       },
       {
         place: "🥉 Third Place",
-        amount: "$2,000",
-        perks: ["Cash prize split among team", "Swag bundle", "Certificates"],
+        amount: "Prizes & Swag",
+        perks: ["Swag bundle", "Certificates"],
       },
     ],
     tracks: [],   // ← Add track prizes here if applicable
@@ -558,12 +558,12 @@ const CONFIG = {
     aboutSJSU: "San Jose State University is one of the oldest public universities in California, at the heart of Silicon Valley. SJSU's College of Engineering produces world-class engineers who go on to shape the technology industry.",
     aboutHP: "HP Inc. creates technology that makes life better for everyone, everywhere. As a co-founding sponsor of HackSJSU, HP provides resources, mentors, and challenges to help students build the future of computing.",
     whyJoin: [
-      { icon: "💡", title: "Build Something Real", desc: "24 hours to take an idea from zero to demo. Real constraints, real creativity." },
+      { icon: "💡", title: "Build Something Real", desc: "Build a project from scratch and present a working demo. Real constraints, real creativity." },
       { icon: "🤝", title: "Network with Pros", desc: "Connect with HP engineers, SJSU faculty, and industry leaders in AI and tech." },
-      { icon: "🏆", title: "Win Amazing Prizes", desc: "$20,000+ in cash prizes, hardware, and career opportunities up for grabs." },
+      { icon: "🏆", title: "Win Amazing Prizes", desc: "HP hardware bundles, career opportunities, and trophies up for grabs." },
       { icon: "📚", title: "Level Up Your Skills", desc: "Workshops, mentoring, and hands-on experience with cutting-edge AI tools." },
       { icon: "🚀", title: "Launch Your Career", desc: "Showcase your talent to HP recruiters and Silicon Valley companies." },
-      { icon: "🎉", title: "Have Fun!", desc: "Free food, swag, friends, and memories that last beyond the 24 hours." },
+      { icon: "🎉", title: "Have Fun!", desc: "Free food, swag, friends, and memories that last throughout the event." },
     ],
   },
 

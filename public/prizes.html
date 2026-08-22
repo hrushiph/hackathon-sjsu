@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prizes — HackSJSU</title>
   <meta name="description"
-    content="HackSJSU prize pool — $20,000+ in cash prizes, hardware, and career opportunities. See all overall, track, and special awards.">
+    content="HackSJSU prizes, hardware, and career opportunities. See all overall and special awards.">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
 </head>
@@ -109,8 +109,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('ph-name').textContent = CONFIG.event.name;
-      document.getElementById('ph-prizes-total').textContent = CONFIG.event.stats.prizes + ' in prizes across overall, track, and special awards.';
-      document.getElementById('cta-prizes').textContent = CONFIG.event.stats.prizes;
+      document.getElementById('ph-prizes-total').textContent = 'Prizes and recognition for winning teams across overall and special categories.';
       renderPrizes();
       initFadeIn();
     });
