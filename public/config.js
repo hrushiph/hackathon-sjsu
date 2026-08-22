@@ -416,7 +416,7 @@ const CONFIG = {
       ],
     },
     {
-      day: "Day 1 — Hackathon",
+      day: "Hackathon",
       date: "September 25, 2026",
       events: [
         { time: "All Day", title: "⚡ Hacking Day", description: "The main build day. Teams work on their projects using the ZGX Nano and local infrastructure. Mentors and advisors circulate throughout the day.", type: "hacking", duration: "" },
@@ -427,7 +427,7 @@ const CONFIG = {
       ],
     },
     {
-      day: "Day 2 — Finals",
+      day: "Finals",
       date: "September 26, 2026 · SJSU Student Union Ballroom, 2nd Floor",
       events: [
         { time: "9:00 AM", title: "🌅 Morning Session", description: "Doors open at the SJSU Student Union Ballroom, 2nd Floor. Welcome to Finals Day!", type: "keynote", duration: "Morning · 9AM–11AM" },
