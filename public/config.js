@@ -90,7 +90,7 @@ const CONFIG = {
       twitter: "#",                       // e.g., https://twitter.com/sjsuhack
       linkedin: "#",                       // e.g., https://linkedin.com/company/sjsuhack
       github: "#",                       // e.g., https://github.com/sjsuhack
-      email: "hackathon@sjsu.edu",
+      email: "apps@sjsuhack.org",
     },
   },
 
@@ -488,7 +488,7 @@ const CONFIG = {
     },
     {
       question: "I have more questions — who do I contact?",
-      answer: "Reach out to us at hackathon@sjsu.edu or DM us on Instagram. We're happy to help!",
+      answer: "Reach out to us at apps@sjsuhack.org or DM us on Instagram. We're happy to help!",
     },
   ],
 
@@ -568,9 +568,9 @@ const CONFIG = {
   // CONTACT
   // ─────────────────────────────────────────────
   contact: {
-    email: "hackathon@sjsu.edu",
-    sponsorEmail: "sponsors@hacksjsu.com",
-    pressEmail: "press@hacksjsu.com",
+    email: "apps@sjsuhack.org",
+    sponsorEmail: "apps@sjsuhack.org",
+    pressEmail: "apps@sjsuhack.org",
     address: "San Jose State University, San Jose, CA 95192",
   },
 };
