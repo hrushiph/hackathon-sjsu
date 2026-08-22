@@ -416,17 +416,6 @@ const CONFIG = {
       ],
     },
     {
-      day: "Hackathon",
-      date: "September 25, 2026 · ISB Labs - 8th Floor",
-      events: [
-        { time: "All Day", title: "⚡ Hacking Day", description: "The main build day. Teams work on their projects using the ZGX Nano and local infrastructure. Mentors and advisors circulate throughout the day.", type: "hacking", duration: "" },
-        { time: "12:00 PM", title: "Lunch", description: "Catered lunch. Refuel and keep building!", type: "logistics", duration: "45 min" },
-        { time: "2:00 PM", title: "Office Hours — Advisory Board", description: "Sign up at the advisor table for focused 1:1 sessions with our industry advisors and mentors.", type: "mentoring", duration: "120 min" },
-        { time: "6:00 PM", title: "Dinner", description: "Catered dinner. Final push before submissions close!", type: "logistics", duration: "45 min" },
-        { time: "8:00 PM", title: "⏰ Hacking Ends — Submissions Due", description: "All coding must stop at 8 PM. Submit all three deliverables — Git repo, Slide deck, and 2-min demo video — before this hard deadline. No late submissions accepted.", type: "event", duration: "" },
-      ],
-    },
-    {
       day: "Finals",
       date: "September 26, 2026 · SJSU Student Union Ballroom, 2nd Floor",
       events: [
